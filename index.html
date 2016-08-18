@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="MyPage">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
@@ -10,12 +10,12 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
-<body>
+<body ng-controller="MainCtrl as mc">
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo">Logo</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="#">Navbar {{ mc.test}}</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
@@ -158,7 +158,17 @@
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  
+   <script src="js/mainCtrl.js"></script>
   <script src="js/init.js"></script>
+  
+  <script> 
+	function hide(lang) {
+	  var els = document.getElementsByClassName(lang);
 
+	[].forEach.call(els, function (el) {el.style.display = 'none' });
+	}
+  </script>
   </body>
 </html>
