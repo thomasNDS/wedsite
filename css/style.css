@@ -55,3 +55,12 @@ p {
 footer.page-footer {
   margin: 0;
 }
+
+@font-face {
+    font-family: klingon;
+    src: url(../fonts/klingon.ttf);
+}
+
+.kl {
+  font-family: klingon;
+ }

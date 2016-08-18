@@ -9,15 +9,30 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <style> 
+	.en,.pt,.cr,.br,.kl {display:none;}
+  </style>
 </head>
 <body ng-controller="MainCtrl as mc">
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo">Logo</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar {{ mc.test}}</a></li>
+        <li><a href="#">Navbar {{mc.test}}</a></li>
+		<li><a class='dropdown-button btn' href='#' data-activates='dropdown1'>{{mc.currentLang}}</a></li>
       </ul>
 
+	  	  <!-- Dropdown Structure -->
+		  <ul id='dropdown1' class='dropdown-content'>
+			<li><a ng-click="mc.switchLang('fr')" href="#!">Français</a></li>
+			<li><a ng-click="mc.switchLang('pt')" href="#!">Portugais</a></li>
+			<li><a ng-click="mc.switchLang('cr')" href="#!">Corse</a></li>
+			<li><a ng-click="mc.switchLang('br')" href="#!">Breton</a></li>
+			<li><a ng-click="mc.switchLang('en')" href="#!">English</a></li>
+			<li><a ng-click="mc.switchLang('kl')" href="#!">Klingon</a></li>
+		  </ul>
+
+	  
       <ul id="nav-mobile" class="side-nav">
         <li><a href="#">Navbar Link</a></li>
       </ul>
@@ -29,7 +44,16 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
+        <h1 class="header center teal-text text-lighten-2">
+			<span class="fr"> fr </span>
+			<span class="en"> en </span>
+			<span class="pt"> pt </span>
+			<span class="cr"> cr </span>
+			<span class="br"> br </span>
+			<span class="kl"> kl </span>
+			
+		</h1>
+		
         <div class="row center">
           <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
         </div>
@@ -161,14 +185,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
   
    <script src="js/mainCtrl.js"></script>
-  <script src="js/init.js"></script>
-  
-  <script> 
-	function hide(lang) {
-	  var els = document.getElementsByClassName(lang);
-
-	[].forEach.call(els, function (el) {el.style.display = 'none' });
-	}
-  </script>
+   <script src="js/init.js"></script>
+	
   </body>
 </html>
