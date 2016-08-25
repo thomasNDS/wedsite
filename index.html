@@ -1,24 +1,24 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html ng-app="MyPage">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title>Parallax Template - Materialize</title>
+  <title>   ♥×♥=♥²  </title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <style> 
-	.en,.pt,.cr,.br,.kl {display:none;}
+	.en,.pt,.cr,.br,.kl,.el {display:none;}
   </style>
 </head>
 <body ng-controller="MainCtrl as mc">
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <a id="logo-container" href="#" class="brand-logo">Super logo</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar {{mc.test}}</a></li>
+        <li><a href="#">un menu ? {{mc.test}}</a></li>
 		<li><a class='dropdown-button btn' href='#' data-activates='dropdown1'>{{mc.currentLang}}</a></li>
       </ul>
 
@@ -30,20 +30,22 @@
 			<li><a ng-click="mc.switchLang('br')" href="#!">Breton</a></li>
 			<li><a ng-click="mc.switchLang('en')" href="#!">English</a></li>
 			<li><a ng-click="mc.switchLang('kl')" href="#!">Klingon</a></li>
+			<li><a ng-click="mc.switchLang('el')" href="#!">Elfique</a></li>
 		  </ul>
 
-	  
+	  <!-- Mobile -->
       <ul id="nav-mobile" class="side-nav">
         <li><a href="#">Navbar Link</a></li>
 		
 		<li><div class="divider"></div></li>
 		<li><a class="subheader">Language</a></li>
-		<li><a ng-click="mc.switchLang('fr')" href="#!">Français</a></li>
-		<li><a ng-click="mc.switchLang('pt')" href="#!">Portugais</a></li>
-		<li><a ng-click="mc.switchLang('cr')" href="#!">Corse</a></li>
-		<li><a ng-click="mc.switchLang('br')" href="#!">Breton</a></li>
-		<li><a ng-click="mc.switchLang('en')" href="#!">English</a></li>
-		<li><a ng-click="mc.switchLang('kl')" href="#!">Klingon</a></li>
+		<li><a ng-click="mc.switchLang('fr')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">Français</a></li>
+		<li><a ng-click="mc.switchLang('pt')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">Portugais</a></li>
+		<li><a ng-click="mc.switchLang('cr')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">Corse</a></li>
+		<li><a ng-click="mc.switchLang('br')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">Breton</a></li>
+		<li><a ng-click="mc.switchLang('en')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">English</a></li>
+		<li><a ng-click="mc.switchLang('kl')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">Klingon</a></li>
+		<li><a ng-click="mc.switchLang('el')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">Elfique</a></li>
 
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -61,11 +63,15 @@
 			<span class="cr"> cr </span>
 			<span class="br"> br </span>
 			<span class="kl"> kl </span>
-			
+			<span class="el"> el </span>
 		</h1>
 		
         <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+			<div class="container-cd"><span class="countdown-elt"> {{mc.monthCd}}</span><br/> mois </div>
+			<div class="container-cd"><span class="countdown-elt"> {{mc.dayCd}}</span><br/> jours </div>
+			<div class="container-cd"><span class="countdown-elt"> {{mc.hourCd}}</span><br/> heures </div>
+			<div class="container-cd"><span class="countdown-elt"> {{mc.minCd}}</span><br/> minutes </div>
+			<div class="container-cd"><span class="countdown-elt"> {{mc.secCd}}</span><br/> secondes </div>
         </div>
         <div class="row center">
           <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
@@ -183,17 +189,17 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      BlaBla
       </div>
     </div>
   </footer>
 
 
   <!--  Scripts-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-  
+
    <script src="js/mainCtrl.js"></script>
    <script src="js/init.js"></script>
 	

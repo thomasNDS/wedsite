@@ -64,3 +64,30 @@ footer.page-footer {
 .kl {
   font-family: klingon;
  }
+ 
+ @font-face {
+    font-family: elfique;
+    src: url(../fonts/tngani.ttf);
+}
+
+.el {
+  font-family: elfique;
+ }
+ 
+ .countdown-elt {
+    background: white;
+    color: black;
+    padding: 0.2em;
+    margin: 0.2em;
+    width: 3em;
+    display: inline-block;
+}
+
+.container-cd{
+    line-height: 1.8em;
+    font-size: 1.2em;
+    display: inline-block;
+    width: 5em;
+}
+
+ 
