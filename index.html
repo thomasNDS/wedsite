@@ -29,8 +29,8 @@
 			<li><a ng-click="mc.switchLang('cr')" href="#!">Corse</a></li>
 			<li><a ng-click="mc.switchLang('br')" href="#!">Breton</a></li>
 			<li><a ng-click="mc.switchLang('en')" href="#!">English</a></li>
-			<li><a ng-click="mc.switchLang('kl')" href="#!">Klingon</a></li>
-			<li><a ng-click="mc.switchLang('el')" href="#!">Elfique</a></li>
+			<li><a class="kl-fix" ng-click="mc.switchLang('kl')" href="#!">Klingon</a></li>
+			<li><a class="el-fix" ng-click="mc.switchLang('el')" href="#!">Elfique</a></li>
 		  </ul>
 
 	  <!-- Mobile -->
@@ -44,8 +44,8 @@
 		<li><a ng-click="mc.switchLang('cr')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">Corse</a></li>
 		<li><a ng-click="mc.switchLang('br')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">Breton</a></li>
 		<li><a ng-click="mc.switchLang('en')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">English</a></li>
-		<li><a ng-click="mc.switchLang('kl')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">Klingon</a></li>
-		<li><a ng-click="mc.switchLang('el')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">Elfique</a></li>
+		<li><a class="kl-fix" ng-click="mc.switchLang('kl')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">Klingon</a></li>
+		<li><a class="el-fix" ng-click="mc.switchLang('el')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">Elfique</a></li>
 
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -67,11 +67,16 @@
 		</h1>
 		
         <div class="row center">
-			<div class="container-cd"><span class="countdown-elt"> {{mc.monthCd}}</span><br/> mois </div>
-			<div class="container-cd"><span class="countdown-elt"> {{mc.dayCd}}</span><br/> jours </div>
-			<div class="container-cd"><span class="countdown-elt"> {{mc.hourCd}}</span><br/> heures </div>
-			<div class="container-cd"><span class="countdown-elt"> {{mc.minCd}}</span><br/> minutes </div>
-			<div class="container-cd"><span class="countdown-elt"> {{mc.secCd}}</span><br/> secondes </div>
+			<div class="container-cd"><span class="countdown-elt"> {{mc.monthCd}}</span><br/> 
+				<span class="fr"> mois </span><span class="en"> months </span><span class="pt"> mês </span><span class="cr"> mese </span><span class="br"> mizioù </span><span class="kl"> maqtagh </span><span class="el"> mois </span> </div>
+			<div class="container-cd"><span class="countdown-elt"> {{mc.dayCd}}</span><br/> 
+				<span class="fr"> jours </span><span class="en"> days </span><span class="pt"> dias </span><span class="cr"> ghjorni  </span><span class="br"> deiz </span><span class="kl"> jaj </span><span class="el"> jours </span> </div>
+			<div class="container-cd"><span class="countdown-elt"> {{mc.hourCd}}</span><br/>
+				<span class="fr"> heures </span><span class="en"> hours </span><span class="pt"> horas </span><span class="cr"> uri </span><span class="br"> eurioù </span><span class="kl"> rep </span><span class="el"> heures </span> </div>
+			<div class="container-cd"><span class="countdown-elt"> {{mc.minCd}}</span><br/>
+				<span class="fr"> minutes </span><span class="en"> minutes </span><span class="pt"> atas </span><span class="cr"> minuti </span><span class="br"> munutennoù </span><span class="kl"> tup </span><span class="el"> minutes </span> </div>
+			<div class="container-cd"><span class="countdown-elt"> {{mc.secCd}}</span><br/>
+				<span class="fr"> secondes </span><span class="en"> seconds </span><span class="pt"> segundos </span><span class="cr"> seconde </span><span class="br"> eilennoù </span><span class="kl"> cha'DIch </span><span class="el"> secondes </span> </div>
         </div>
         <div class="row center">
           <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>

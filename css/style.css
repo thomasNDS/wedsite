@@ -64,6 +64,9 @@ footer.page-footer {
 .kl {
   font-family: klingon;
  }
+ .kl-fix {
+  font-family: klingon;
+ }
  
  @font-face {
     font-family: elfique;
@@ -71,6 +74,9 @@ footer.page-footer {
 }
 
 .el {
+  font-family: elfique;
+ }
+ .el-fix {
   font-family: elfique;
  }
  
