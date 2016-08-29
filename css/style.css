@@ -72,6 +72,22 @@ footer.page-footer {
     font-family: elfique;
     src: url(../fonts/tngani.ttf);
 }
+ @font-face {
+    font-family: blacksword;
+    src: url(../fonts/Blacksword.otf);
+}
+.blacksword {
+	font-family: blacksword;
+}
+#head {
+	-webkit-transform: rotate(-5deg);
+	-moz-transform: rotate(-5deg);
+	-o-transform: rotate(-5deg);
+	transform: rotate(-5deg);
+	writing-mode: lr-tb;
+	margin-top:0.7em;
+	margin-bottom: 0.9em;
+}
 
 .el {
   font-family: elfique;
@@ -96,4 +112,17 @@ footer.page-footer {
     width: 5em;
 }
 
+.date {
+    border-top: 2px solid#ffffff;
+	padding-left: 1em;
+	padding-right: 1em;
+	font-size: 0.6em;
+	margin-top:0;
+}
+
+.pres-img {
+	width: 126px;
+	height: 126px;
+}
+ 
  
