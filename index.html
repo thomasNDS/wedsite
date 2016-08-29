@@ -183,19 +183,51 @@
   </div>
 
 
-  <div class="parallax-container valign-wrapper">
+  <div class="parallax-container valign-wrapper" style="min-height:100px;">
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-			<h4>Trajet</h4>
-          <h5 class="header col s12 light">En esperant que ce soit pas loin 
-		  (Map google map a venir)</h5>
+			<h4>Lieux</h4>
+          <h5 class="header col s12 light">La cérémonie à la mairie se situera à Londres, et la soirée au chateau de Los Angeles. Il faut prévoir 9H de trajet entre les deux sites.</h5>    
         </div>
       </div>
+
     </div>
     <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
   </div>
+  
+  
+  <div class="container">
+    <div class="section">
 
+      <div class="row">
+		  
+        <div class="col s12 m6">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i></i></h2>
+            <h5 class="center">Londres</h5>
+
+            <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+          </div>
+        </div>
+		
+		 <div class="col s12 m6">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i></i></h2>
+            <h5 class="center">LA</h5>
+
+            <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+  <div id="map" style="height:300px; width:100%;"></div>
+
+
+  
     <div class="container">
     <div class="section">
 
@@ -268,6 +300,37 @@
 
    <script src="js/mainCtrl.js"></script>
    <script src="js/init.js"></script>
+   
+    <script>
+      function initMap() {
+        var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 7,
+          center: {lat: 41.85, lng: -87.65}
+        });
+        directionsDisplay.setMap(map);
+
+		calculateAndDisplayRoute(directionsService, directionsDisplay);
+      }
+
+      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+        directionsService.route({
+          origin: 'Grenoble, France',
+          destination: 'Lyon, France',
+          travelMode: 'DRIVING'
+        }, function(response, status) {
+          if (status === 'OK') {
+            directionsDisplay.setDirections(response);
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIrGSbfNWbr8U9jP_lrSXD6DUfnsEE6eM&callback=initMap">
+    </script>
 	
   </body>
 </html>
