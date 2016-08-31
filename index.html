@@ -307,10 +307,40 @@
         var directionsDisplay = new google.maps.DirectionsRenderer;
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 7,
-          center: {lat: 41.85, lng: -87.65}
+          center: {lat: 41.85, lng: -87.65},
+		  fullscreenControl: true,
+		  scrollwheel : false,
+		  zoomControlOptions : {scrollwheel:true},
+		  styles: [
+            {
+              featureType: 'all',
+              stylers: [
+                { saturation: -50 }
+              ]
+            },{
+              featureType: 'road.arterial',
+              elementType: 'geometry',
+              stylers: [
+                { hue: '#00ffee' },
+                { saturation: 50 }
+              ]
+            },{
+              featureType: 'poi.business',
+              elementType: 'labels',
+              stylers: [
+                { visibility: 'off' }
+              ]
+            }
+          ]
         });
         directionsDisplay.setMap(map);
-
+		
+		var marker = new google.maps.Marker({
+			position: {lat: 45.186030, lng : 5.747947},
+			map: map,
+			title: 'New York'
+		});
+	
 		calculateAndDisplayRoute(directionsService, directionsDisplay);
       }
 
@@ -323,7 +353,7 @@
           if (status === 'OK') {
             directionsDisplay.setDirections(response);
           } else {
-            window.alert('Directions request failed due to ' + status);
+            console.log('Directions request failed due to ' + status);
           }
         });
       }
