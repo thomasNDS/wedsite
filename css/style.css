@@ -127,5 +127,8 @@ footer.page-footer {
 	width: 126px;
 	height: 126px;
 }
- 
+ .img-card {
+     filter: grayscale(100%);
+    -webkit-filter: saturate(40%);
+ }
  
