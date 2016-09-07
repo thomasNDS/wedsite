@@ -44,10 +44,37 @@ function MainCtrl($interval) {
     }
 	
 	/** */
+	this.addCSSRule =function(sheet, selector, rules, index) {
+	
+		if("insertRule" in sheet) {
+			sheet.insertRule(selector + "{" + rules + "}", index);
+		}
+		else if("addRule" in sheet) {
+			sheet.addRule(selector, rules, index);
+		}
+	}
+
+	/** */
+    this.switchLangToKl = function(){
+		console.log("switchLangToKl")
+		self.switchLang('fr')
+		this.addCSSRule(self.sheet, ".fr,.cv", 'font-family: "klingon", sans-serif;', 0);
+    }
+	
+		/** */
+    this.switchLangToEl = function(){
+		console.log("switchLangToEl")
+		self.switchLang('fr')
+		this.addCSSRule(self.sheet, ".fr,.cv", 'font-family: "elfique", sans-serif;', 0);
+    }
+	
+	/** */
     this.switchLang = function(lang){
 		console.log(lang)
 		self.currentLang = lang
-		
+		if (self.sheet.rules && self.sheet.rules.length > 0) {
+			self.sheet.deleteRule(0)
+		}
 		this.hideAllLang()
 		this.showLang(lang)
     }
@@ -68,10 +95,17 @@ function MainCtrl($interval) {
 		
 	// Attributes
 	
+	this.sheet = (function() {
+			var style = document.createElement("style");
+			style.appendChild(document.createTextNode(""));
+			document.head.appendChild(style);
+			return style.sheet;
+		})();
+		
 	this.test = "HOHO"
 	this.currentLang = "FR"
-	this.wedDate = new Date(2017, 8-1, 24, 13, 0, 42, 42)
-	this.langs = ["fr", "pt", "cr", "br", "en", "kl", "el"]
+	this.wedDate = new Date(2017, 7-1, 8, 13, 0, 37, 42)
+	this.langs = ["fr", "pt", "cr", "br", "en", "esp"]
 	var self = this
 	
 	self.monthCd = 0

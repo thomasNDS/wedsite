@@ -10,7 +10,7 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <style> 
-	.en,.pt,.cr,.br,.kl,.el {display:none;}
+	.en,.pt,.cr,.br {display:none;}
   </style>
 </head>
 <body ng-controller="MainCtrl as mc">
@@ -29,8 +29,8 @@
 			<li><a ng-click="mc.switchLang('cr')" href="#!">Corse</a></li>
 			<li><a ng-click="mc.switchLang('br')" href="#!">Breton</a></li>
 			<li><a ng-click="mc.switchLang('en')" href="#!">English</a></li>
-			<li><a class="kl-fix" ng-click="mc.switchLang('kl')" href="#!">Klingon</a></li>
-			<li><a class="el-fix" ng-click="mc.switchLang('el')" href="#!">Elfique</a></li>
+			<li><a class="kl-fix" ng-click="mc.switchLangToKl()" href="#!">Klingon</a></li>
+			<li><a class="el-fix" ng-click="mc.switchLangToEl()" href="#!">Elfique</a></li>
 		  </ul>
 
 	  <!-- Mobile -->
@@ -44,8 +44,8 @@
 		<li><a ng-click="mc.switchLang('cr')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">Corse</a></li>
 		<li><a ng-click="mc.switchLang('br')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">Breton</a></li>
 		<li><a ng-click="mc.switchLang('en')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">English</a></li>
-		<li><a class="kl-fix" ng-click="mc.switchLang('kl')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">Klingon</a></li>
-		<li><a class="el-fix" ng-click="mc.switchLang('el')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">Elfique</a></li>
+		<li><a class="kl-fix" ng-click="mc.switchLangToKl()" href="#!" onclick="$('.nav-mobile').sideNav('hide');">Klingon</a></li>
+		<li><a class="el-fix" ng-click="mc.switchLangToEl()" href="#!" onclick="$('.nav-mobile').sideNav('hide');">Elfique</a></li>
 
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -66,30 +66,28 @@
 			<span class="pt"> SE CASAR </span>
 			<span class="cr"> SPOSONO </span>
 			<span class="br"> EUREDIÑ </span>
-			<span class="kl"> SE MARRIENT </span>
-			<span class="el"> SE MARRIENT </span>
 		</h2>
-		<h2 class="center" style="margin-top:0;"> <span class="date">24/07/2042</span> </h2>
+		<h2 class="center" style="margin-top:0;"> <span class="date cv">24/07/2042</span> </h2>
 
 			
         <div class="row center">
 			<div class="container-cd"><span class="countdown-elt"> {{mc.monthCd}}</span><br/> 
-				<span class="fr"> mois </span><span class="en"> months </span><span class="pt"> mês </span><span class="cr"> mese </span><span class="br"> mizioù </span><span class="kl"> maqtagh </span><span class="el"> mois </span> </div>
+				<span class="fr"> mois </span><span class="en"> months </span><span class="pt"> mês </span><span class="cr"> mese </span><span class="br"> mizioù </span> </div>
 			<div class="container-cd"><span class="countdown-elt"> {{mc.dayCd}}</span><br/> 
-				<span class="fr"> jours </span><span class="en"> days </span><span class="pt"> dias </span><span class="cr"> ghjorni  </span><span class="br"> deiz </span><span class="kl"> jaj </span><span class="el"> jours </span> </div>
+				<span class="fr"> jours </span><span class="en"> days </span><span class="pt"> dias </span><span class="cr"> ghjorni  </span><span class="br"> deiz </span> </div>
 			<div class="container-cd"><span class="countdown-elt"> {{mc.hourCd}}</span><br/>
-				<span class="fr"> heures </span><span class="en"> hours </span><span class="pt"> horas </span><span class="cr"> uri </span><span class="br"> eurioù </span><span class="kl"> rep </span><span class="el"> heures </span> </div>
+				<span class="fr"> heures </span><span class="en"> hours </span><span class="pt"> horas </span><span class="cr"> uri </span><span class="br"> eurioù </span></div>
 			<div class="container-cd"><span class="countdown-elt"> {{mc.minCd}}</span><br/>
-				<span class="fr"> minutes </span><span class="en"> minutes </span><span class="pt"> atas </span><span class="cr"> minuti </span><span class="br"> munutennoù </span><span class="kl"> tup </span><span class="el"> minutes </span> </div>
+				<span class="fr"> minutes </span><span class="en"> minutes </span><span class="pt"> atas </span><span class="cr"> minuti </span><span class="br"> munutennoù </span></div>
 			<div class="container-cd"><span class="countdown-elt"> {{mc.secCd}}</span><br/>
-				<span class="fr"> secondes </span><span class="en"> seconds </span><span class="pt"> segundos </span><span class="cr"> seconde </span><span class="br"> eilennoù </span><span class="kl"> cha'DIch </span><span class="el"> secondes </span> </div>
+				<span class="fr"> secondes </span><span class="en"> seconds </span><span class="pt"> segundos </span><span class="cr"> seconde </span><span class="br"> eilennoù </span> </div>
         </div>
 
         <br><br>
 		
       </div>
     </div>
-    <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="img/stars.jpeg" alt="Unsplashed background img 1"></div>
   </div>
 
 
@@ -102,7 +100,7 @@
         <div class="col s12 m6">
           <div class="icon-block">
             <h2 class="center brown-text"><img src="img/celine.jpeg" alt="" class="circle pres-img"></h2>
-            <h5 class="center">Céline</h5>
+            <h5 class="center cv">Céline</h5>
 
             <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque trLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tr</p>
           </div>
@@ -111,7 +109,7 @@
         <div class="col s12 m6">
           <div class="icon-block">
             <h2 class="center brown-text"><img src="img/thomas.jpg" alt="" class="circle pres-img"></h2>
-            <h5 class="center">Thomas</h5>
+            <h5 class="center cv">Thomas</h5>
 
             <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque trLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tr</p>
           </div>
@@ -130,7 +128,7 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
+    <div class="parallax"><img src="img/img1.jpg" alt="Unsplashed background img 2"></div>
   </div>
 
   <div class="container">
@@ -193,7 +191,7 @@
       </div>
 
     </div>
-    <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><img src="img/img6.jpg" alt="Unsplashed background img 3"></div>
   </div>
   
   <div class="grey lighten-4">
@@ -206,7 +204,7 @@
 
 			  <div class="card hoverable">
 				<div class="card-image waves-effect waves-block waves-light">
-				  <img class="activator img-card" src="img/mairie.jpg" style="margin-bottom: -30px; margin-top: -29px;">
+				  <img class="activator img-card" src="img/mairie.jpg" style="">
 				</div>
 				<div class="card-content">
 				  <span class="card-title activator grey-text text-darken-4">Mairie de Londres<i class="material-icons right">info</i></span>
@@ -231,7 +229,7 @@
 				</div>
 				<div class="card-content">
 				  <span class="card-title activator grey-text text-darken-4">Chez Hagrid<i class="material-icons right">info</i></span>
-				  <p> 17h00 à ∞ (et au delàs)</p>
+				  <p> 17h00 à ∞ (et au delà)</p>
 				</div>
 				<div class="card-reveal">
 				  <span class="card-title grey-text text-darken-4">Chez Hagrid<i class="material-icons right">close</i></span>
@@ -275,16 +273,16 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><img src="img/bg1.jpg" alt="Unsplashed background img 3"></div>
   </div>
   
   <footer class="page-footer teal">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">BLA BLA BLA Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tr</p>
-
+          <h5 class="white-text">Pour nous contacter</h5>
+          <p class="grey-text text-lighten-4">Par mail au truc@super-adresse.love. <br>
+		  Céline et Thomas ou nos familles par téléphone, de préférence en soirée. </p>
 
         </div>
         <div class="col l3 s12">
@@ -299,8 +297,8 @@
         <div class="col l3 s12">
           <h5 class="white-text">Connect</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Le Chateau d'Escart</a></li>
+            <li><a class="white-text" href="#!"></a></li>
             <li><a class="white-text" href="#!">Link 3</a></li>
             <li><a class="white-text" href="#!">Link 4</a></li>
           </ul>

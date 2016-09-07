@@ -87,8 +87,8 @@
 	   */
       function calculateAndDisplayRoute(directionsService, directionsDisplay) {
         directionsService.route({
-          origin: 'Grenoble, France',
-          destination: 'Chambéry, France',
+          origin: {lat : 45.456704, lng : 6.116509},
+          destination: {lat : 45.441006, lng : 6.120036},
           travelMode: 'DRIVING'
         }, function(response, status) {
           if (status === 'OK') {
