@@ -39,6 +39,19 @@ p {
   }
 }
 
+  .not-so-small {
+    min-height: 200px;
+  }
+  
+@media only screen and (max-width : 992px) {
+  .not-so-small {
+    min-height: 300px;
+  }
+    .not-so-small>.section {
+		margin-top: -50px;
+  }
+}
+
 @media only screen and (max-width : 500px) {
   #index-banner .section {
     top: 0;
@@ -47,6 +60,7 @@ p {
     min-height: 500px;
   }
 }
+
 
 .icon-block {
   padding: 0 15px;
@@ -169,3 +183,11 @@ hr.style17:after {
 	-moz-transform: rotate(60deg);
 	transform: rotate(60deg);
 }
+.big-icons{
+    padding-right: 0.2em;
+    font-size: 1.2em;
+    background: #26a69a;
+    color: #dfe8e7;
+}
+
+
