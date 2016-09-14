@@ -154,20 +154,22 @@ hr.style16:after {
   content: '\002702'; 
   display: inline-block; 
   position: relative; 
-  top: -12px; 
+  top: -18px; 
   left: 40px; 
   padding: 0 3px; 
 
   color: #8c8b8b; 
-  font-size: 18px; 
+  font-size: 24px; 
 }
 
 .block-hr {
-	background: #f3f3f3;
+	background: url(../img/skulls.png);
+	-webkit-filter: hue-rotate(220deg) saturate(5);
+    filter: hue-rotate(220deg) saturate(5);
 }
 
 hr.style17 {
-	border-top: 1px solid #8c8b8b;
+	border-top: 1px solid grey;
 	text-align: center;
 }
 hr.style17:after {
@@ -176,8 +178,8 @@ hr.style17:after {
 	position: relative;
 	top: -14px;
 	padding: 0 10px;
-	background: #f3f3f3;
-	color: #8c8b8b;
+    background: url(../img/skulls.png);
+	color: grey;
 	font-size: 18px;
 	-webkit-transform: rotate(60deg);
 	-moz-transform: rotate(60deg);
