@@ -1,7 +1,7 @@
 'use strict'
 
 //////////////////////////////////////CONTROLLER///////////////////////////////
-function MainCtrl($interval) {
+function MainCtrl($interval, $routeParams, $scope) {
 
 	// Functions ********************************************************************
 	/** */
@@ -114,18 +114,50 @@ function MainCtrl($interval) {
 	self.minCd = 0
 	self.secCd = 0
 	
-	// Init
-	this.updateCountDown()
-	 $interval(this.updateCountDown, 1000);
+	self.lvl = 1
 	
+	// Init
+	console.log("INIT")
+	this.updateCountDown()
+	$interval(this.updateCountDown, 1000);
+		  
+	$scope.$on('$routeChangeSuccess', function() {
+		var key = $routeParams.key
+		
+		if (key) {
+			console.debug("key exist : " + key)
+			
+			if (key[0] === 'v') {
+			 console.debug("lvl 1	: " + key)
+			}
+			if (key[0] === 'r') {
+			 console.debug("lvl 2	: " + key)
+			 self.lvl = 2
+			}
+		}
+		console.log($routeParams.key);
+		console.log($routeParams);
+	});
+		  
 }
-MainCtrl.$inject = ['$interval']
+MainCtrl.$inject = ['$interval',  '$routeParams', '$scope']
 
 ////////////////////////////////// APP DEFINITION ///////////////////////////////
-angular
-    .module('MyPage', [])
+
+var app = angular
+    .module('MyPage', ['ngRoute'])
     .controller('MainCtrl', MainCtrl);
 	
+app.config(function($routeProvider, $locationProvider) {
+		
+	$routeProvider
+		.when("/:key", { })
+
+});
+	
+////////////////////////////////// PROTO HELPER ///////////////////////////////
+
+/** */
 Date.prototype.monthDays= function(){
     var d= new Date(this.getFullYear(), this.getMonth()+1, 0);
     return d.getDate();

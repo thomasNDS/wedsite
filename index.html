@@ -212,7 +212,7 @@
 			</div>
 		</div>
 
- <!-- ****************************  CEREMONIE  **************************** -->
+ <!-- ****************************  INVITATION  **************************** -->
 		<div class="section" style="min-height: 240px;">
 			<hr class="style16"/>
 
@@ -222,8 +222,11 @@
 							<hr class="style17">
 								<br>
 									<div class="row center">
-										<h5 class="header col s12 light"> <span>Sont heureux de vous inviter à leur mariage le samedi 24
-											aout 2042.</span></h5>
+										<h5 class="header col s12 light" style="line-height: 1.5em;"> 
+											<span>Sont heureux de vous inviter au vin d'honneur </span> 
+											<span ng-show="mc.lvl==2"> et au repas </span> 
+											<span>de leurs mariage, le samedi 8 mars 2042.</span> 
+										</h5>
 									</div>
 									
 									<br>
@@ -312,7 +315,7 @@
 		</div>
   
      <!-- ****************************  CARDS LIEUX  **************************** -->
-		<div class="grey lighten-4">
+		<div class="grey lighten-5">
 			<div class="container">
 				<div class="section">
 
@@ -506,14 +509,16 @@
 					</div>
 
 					<div class="col l6 s12">
-						<h5 class="white-text">Pour venir</h5>
-						<ul>
-							<li>&#x2708; </li>
-							<li>&#x2708; </li>
+						<h5 class="white-text">A ne pas oublier ...</h5>
+						<ul class="grey-text text-lighten-4">
+							<li> - Votre plus beau sourire</li>
+							<li> - Une tenue de saison (d'hiver)</li>
+							<li> - Un parapluie (même si on croise les doigts)</li>
+							<li> - Nous prévenir si vous serez présent</li>
 						</ul>
 					</div>
 				</div>
-			</div>
+			</div><div ng-view></div>
 			<div class="footer-copyright">
 				<div class="container center">
 					<span style="float:left;">&#x1F490; &#x1F48D; &#x1F492; </span>
@@ -525,9 +530,9 @@
 			</div>
 		</footer>
 
-
   <!--  Scripts-->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
 		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script src="js/materialize.js"></script>
 

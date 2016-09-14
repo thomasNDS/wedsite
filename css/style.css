@@ -163,9 +163,7 @@ hr.style16:after {
 }
 
 .block-hr {
-	background: url(../img/skulls.png);
-	-webkit-filter: hue-rotate(220deg) saturate(5);
-    filter: hue-rotate(220deg) saturate(5);
+	background: url(../img/test.jpg);
 }
 
 hr.style17 {
@@ -178,7 +176,7 @@ hr.style17:after {
 	position: relative;
 	top: -14px;
 	padding: 0 10px;
-    background: url(../img/skulls.png);
+    background: url(../img/test.jpg);
 	color: grey;
 	font-size: 18px;
 	-webkit-transform: rotate(60deg);
