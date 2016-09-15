@@ -157,7 +157,7 @@ hr.style16:after {
   top: -18px; 
   left: 40px; 
   padding: 0 3px; 
-
+  z-index: 111;
   color: #8c8b8b; 
   font-size: 24px; 
 }

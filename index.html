@@ -15,521 +15,552 @@
 			</style>
 	</head>
 	<body ng-controller="MainCtrl as mc">
-		<nav class="white" role="navigation">
-			<div class="nav-wrapper container">
-				<a id="logo-container" href="#" class="brand-logo">Super logo</a>
-				<ul class="right hide-on-med-and-down">
-					<li>
-						<a href="#">un menu ? {{mc.test}}</a>
-					</li>
-					<li>
-						<a class='dropdown-button btn' href='#' data-activates='dropdown1'>{{mc.currentLang}}</a>
-					</li>
-				</ul>
+<!-- Mobile -->
+						<ul id="nav-mobile" class="side-nav">
+							<li>
+								<a href="#">Navbar Link</a>
+							</li>
 
-	  	  <!-- Dropdown Structure -->
-				<ul id='dropdown1' class='dropdown-content'>
-					<li>
-						<a ng-click="mc.switchLang('fr')" href="#!">Français</a>
-					</li>
-					<li>
-						<a ng-click="mc.switchLang('pt')" href="#!">Portugais</a>
-					</li>
-					<li>
-						<a ng-click="mc.switchLang('cr')" href="#!">Corse</a>
-					</li>
-					<li>
-						<a ng-click="mc.switchLang('br')" href="#!">Breton</a>
-					</li>
-					<li>
-						<a ng-click="mc.switchLang('en')" href="#!">English</a>
-					</li>
-					<li>
-						<a class="kl-fix" ng-click="mc.switchLangToKl()" href="#!">Klingon</a>
-					</li>
-					<li>
-						<a class="el-fix" ng-click="mc.switchLangToEl()" href="#!">Elfique</a>
-					</li>
-				</ul>
+							<li>
+								<div class="divider"></div>
+							</li>
+							<li>
+								<a class="subheader">Language</a>
+							</li>
+							<li>
+								<a ng-click="mc.switchLang('fr')" href="#!"
+									onclick="$('.nav-mobile').sideNav('hide');">Français</a>
+							</li>
+							<li>
+								<a ng-click="mc.switchLang('pt')" href="#!"
+									onclick="$('.nav-mobile').sideNav('hide');">Portugais</a>
+							</li>
+							<li>
+								<a ng-click="mc.switchLang('cr')" href="#!"
+									onclick="$('.nav-mobile').sideNav('hide');">Corse</a>
+							</li>
+							<li>
+								<a ng-click="mc.switchLang('br')" href="#!"
+									onclick="$('.nav-mobile').sideNav('hide');">Breton</a>
+							</li>
+							<li>
+								<a ng-click="mc.switchLang('en')" href="#!"
+									onclick="$('.nav-mobile').sideNav('hide');">English</a>
+							</li>
+							<li>
+								<a class="kl-fix" ng-click="mc.switchLangToKl()" href="#!"
+									onclick="$('.nav-mobile').sideNav('hide');">Klingon</a>
+							</li>
+							<li>
+								<a class="el-fix" ng-click="mc.switchLangToEl()" href="#!"
+									onclick="$('.nav-mobile').sideNav('hide');">Elfique</a>
+							</li>
+						</ul>
 
-	  <!-- Mobile -->
-				<ul id="nav-mobile" class="side-nav">
-					<li>
-						<a href="#">Navbar Link</a>
-					</li>
-
-					<li>
-						<div class="divider"></div>
-					</li>
-					<li>
-						<a class="subheader">Language</a>
-					</li>
-					<li>
-						<a ng-click="mc.switchLang('fr')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">Français</a>
-					</li>
-					<li>
-						<a ng-click="mc.switchLang('pt')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">Portugais</a>
-					</li>
-					<li>
-						<a ng-click="mc.switchLang('cr')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">Corse</a>
-					</li>
-					<li>
-						<a ng-click="mc.switchLang('br')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">Breton</a>
-					</li>
-					<li>
-						<a ng-click="mc.switchLang('en')" href="#!" onclick="$('.nav-mobile').sideNav('hide');">English</a>
-					</li>
-					<li>
-						<a class="kl-fix" ng-click="mc.switchLangToKl()" href="#!"
-							onclick="$('.nav-mobile').sideNav('hide');">Klingon</a>
-					</li>
-					<li>
-						<a class="el-fix" ng-click="mc.switchLangToEl()" href="#!"
-							onclick="$('.nav-mobile').sideNav('hide');">Elfique</a>
-					</li>
-
-				</ul>
-				<a href="#" data-activates="nav-mobile" class="button-collapse">
-					<i class="material-icons">menu</i>
-				</a>
-			</div>
-		</nav>
-  
  <!-- ****************************  HEADER section  **************************** -->
-		<div id="index-banner" class="parallax-container">
-			<div class="section no-pad-bot">
+		<div id="index-banner" class=""
+			style="    background: url(img/stars.jpg);
+												   color: white;
+													position: fixed;
+													z-index: 0;
+													width: 100%;
+													height: 100vh;
+													top: 0;
+													background-size: cover;
+													background-repeat: no-repeat;
+													background-color: #113c4c;">
+			<div class="section no-pad-bot" style="">
 				<div class="container">
-					<br>
-						<br>
-							<h1 id="head" class="header center teal-text text-lighten-2 blacksword">
-								Céline & Thomas
-							</h1>
-							<h2 class="center" style="font-size: 1.5em; margin: 0; line-height: 0;">
-								<span class="fr"> SE MARIENT </span>
-								<span class="en"> ARE GETTING MARRIED </span>
-								<span class="pt"> SE CASAR </span>
-								<span class="cr"> SPOSONO </span>
-								<span class="br"> EUREDIÑ </span>
-							</h2>
-							<h2 class="center" style="margin-top:0;">
-								<span class="date cv">24/07/2042</span>
-							</h2>
+  
+			<!-- desktop -->
+					<div class="right">
+					<!-- Dropdown Structure -->
+						<ul id='dropdown1' class='dropdown-content'>
+							<li>
+								<a ng-click="mc.switchLang('fr')" href="#!">Français</a>
+							</li>
+							<li>
+								<a ng-click="mc.switchLang('pt')" href="#!">Portugais</a>
+							</li>
+							<li>
+								<a ng-click="mc.switchLang('cr')" href="#!">Corse</a>
+							</li>
+							<li>
+								<a ng-click="mc.switchLang('br')" href="#!">Breton</a>
+							</li>
+							<li>
+								<a ng-click="mc.switchLang('en')" href="#!">English</a>
+							</li>
+							<li>
+								<a class="kl-fix" ng-click="mc.switchLangToKl()" href="#!">Klingon</a>
+							</li>
+							<li>
+								<a class="el-fix" ng-click="mc.switchLangToEl()" href="#!">Elfique</a>
+							</li>
+						</ul>
 
+						
+				<!-- mobile -->
+						<a class='hide-on-med-and-up  button-collapse btn-floating btn-large waves-effect waves-light' href='#'
+							data-activates='nav-mobile'>
+							<i class="material-icons">flag</i>
+						</a>
 
-							<div class="row center">
-								<div class="container-cd">
-									<span class="countdown-elt"> {{mc.monthCd}}</span>
-									<br />
-									<span class="fr"> mois </span>
-									<span class="en"> months </span>
-									<span class="pt"> mês </span>
-									<span class="cr"> mese </span>
-									<span class="br"> mizioù </span>
-								</div>
-								<div class="container-cd">
-									<span class="countdown-elt"> {{mc.dayCd}}</span>
-									<br />
-									<span class="fr"> jours </span>
-									<span class="en"> days </span>
-									<span class="pt"> dias </span>
-									<span class="cr"> ghjorni  </span>
-									<span class="br"> deiz </span>
-								</div>
-								<div class="container-cd">
-									<span class="countdown-elt"> {{mc.hourCd}}</span>
-									<br />
-									<span class="fr"> heures </span>
-									<span class="en"> hours </span>
-									<span class="pt"> horas </span>
-									<span class="cr"> uri </span>
-									<span class="br"> eurioù </span>
-								</div>
-								<div class="container-cd">
-									<span class="countdown-elt"> {{mc.minCd}}</span>
-									<br />
-									<span class="fr"> minutes </span>
-									<span class="en"> minutes </span>
-									<span class="pt"> atas </span>
-									<span class="cr"> minuti </span>
-									<span class="br"> munutennoù </span>
-								</div>
-								<div class="container-cd">
-									<span class="countdown-elt"> {{mc.secCd}}</span>
-									<br />
-									<span class="fr"> secondes </span>
-									<span class="en"> seconds </span>
-									<span class="pt"> segundos </span>
-									<span class="cr"> seconde </span>
-									<span class="br"> eilennoù </span>
-								</div>
-							</div>
-							<br>
-								<br>
+						<a
+							class='dropdown-button btn hide-on-small-only btn-floating btn-large waves-effect waves-light'
+							href='#' data-activates='dropdown1'>
+							{{mc.currentLang}}
+						</a>
 
+					</div>
+
+					<br />
+					<br />
+					<h1 id="head" class="header center teal-text text-lighten-2 blacksword">
+						Céline & Thomas
+					</h1>
+					<h2 class="center" style="font-size: 1.5em; margin: 0; line-height: 0;">
+						<span class="fr"> SE MARIENT </span>
+						<span class="en"> ARE GETTING MARRIED </span>
+						<span class="pt"> SE CASAR </span>
+						<span class="cr"> SPOSONO </span>
+						<span class="br"> EUREDIÑ </span>
+					</h2>
+					<h2 class="center" style="margin-top:0;">
+						<span class="date cv">24/07/2042</span>
+					</h2>
+
+					<div class="row center">
+						<div class="container-cd">
+							<span class="countdown-elt"> {{mc.monthCd}}</span>
+							<br />
+							<span class="fr"> mois </span>
+							<span class="en"> months </span>
+							<span class="pt"> mês </span>
+							<span class="cr"> mese </span>
+							<span class="br"> mizioù </span>
+						</div>
+						<div class="container-cd">
+							<span class="countdown-elt"> {{mc.dayCd}}</span>
+							<br />
+							<span class="fr"> jours </span>
+							<span class="en"> days </span>
+							<span class="pt"> dias </span>
+							<span class="cr"> ghjorni  </span>
+							<span class="br"> deiz </span>
+						</div>
+						<div class="container-cd">
+							<span class="countdown-elt"> {{mc.hourCd}}</span>
+							<br />
+							<span class="fr"> heures </span>
+							<span class="en"> hours </span>
+							<span class="pt"> horas </span>
+							<span class="cr"> uri </span>
+							<span class="br"> eurioù </span>
+						</div>
+						<div class="container-cd">
+							<span class="countdown-elt"> {{mc.minCd}}</span>
+							<br />
+							<span class="fr"> minutes </span>
+							<span class="en"> minutes </span>
+							<span class="pt"> atas </span>
+							<span class="cr"> minuti </span>
+							<span class="br"> munutennoù </span>
+						</div>
+						<div class="container-cd">
+							<span class="countdown-elt"> {{mc.secCd}}</span>
+							<br />
+							<span class="fr"> secondes </span>
+							<span class="en"> seconds </span>
+							<span class="pt"> segundos </span>
+							<span class="cr"> seconde </span>
+							<span class="br"> eilennoù </span>
+						</div>
+					</div>
+					<br />
+					<br />
 				</div>
-			</div>
-			<div class="parallax">
-				<img src="img/stars.jpeg" alt="Unsplashed background img 1">
 			</div>
 		</div>
 
 
  <!-- ****************************  NOUS section  **************************** -->
+		<div class="white" style="position: relative; z-index:2; margin-top: 100vh;">
 
-		<div class="section">
-			<div class="container">
+			<div class="section">
+				<div class="container">
       <!--   Icon Section   -->
-				<div class="row">
-					<div class="col s12 m6">
-						<div class="icon-block">
-							<h2 class="center brown-text">
-								<img src="img/celine.jpeg" alt="" class="circle pres-img">
-							</h2>
-							<h5 class="center cv">Céline</h5>
+					<div class="row">
+						<div class="col s12 m6">
+							<div class="icon-block">
+								<h2 class="center brown-text">
+									<img src="img/celine.jpeg" alt="" class="circle pres-img">
+								</h2>
+								<h5 class="center cv">Céline</h5>
 
-							<p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-								scelerisque id nunc nec volutpat. Etiam pellentesque trLorem ipsum dolor
-								sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec
-								volutpat. Etiam pellentesque tr</p>
+								<p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+									scelerisque id nunc nec volutpat. Etiam pellentesque trLorem ipsum dolor
+									sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec
+									volutpat. Etiam pellentesque tr</p>
+							</div>
+						</div>
+
+						<div class="col s12 m6">
+							<div class="icon-block">
+								<h2 class="center brown-text">
+									<img src="img/thomas.jpg" alt="" class="circle pres-img">
+								</h2>
+								<h5 class="center cv">Thomas</h5>
+
+								<p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+									scelerisque id nunc nec volutpat. Etiam pellentesque trLorem ipsum dolor
+									sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec
+									volutpat. Etiam pellentesque tr</p>
+							</div>
 						</div>
 					</div>
 
-					<div class="col s12 m6">
-						<div class="icon-block">
-							<h2 class="center brown-text">
-								<img src="img/thomas.jpg" alt="" class="circle pres-img">
-							</h2>
-							<h5 class="center cv">Thomas</h5>
-
-							<p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-								scelerisque id nunc nec volutpat. Etiam pellentesque trLorem ipsum dolor
-								sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec
-								volutpat. Etiam pellentesque tr</p>
-						</div>
-					</div>
 				</div>
-
 			</div>
-		</div>
 
  <!-- ****************************  INVITATION  **************************** -->
-		<div class="section" style="min-height: 240px;">
-			<hr class="style16"/>
+			<div class="section" style="min-height: 240px;">
+				<hr class="style16" />
 
-				<div class="block-hr">
+				<div class="block-hr" style="min-height:30vh;    position: relative;">
 					<br>
-						<div class="container">
+						<div class="container"
+							style="    position: absolute;
+																	height: 100%;
+																	left: 0;
+																	right: 0;">
 							<hr class="style17">
 								<br>
 									<div class="row center">
-										<h5 class="header col s12 light" style="line-height: 1.5em;"> 
-											<span>Sont heureux de vous inviter au vin d'honneur </span> 
-											<span ng-show="mc.lvl==2"> et au repas </span> 
-											<span>de leurs mariage, le samedi 8 mars 2042.</span> 
+										<h5 class="header col s12 light" style="line-height: 1.5em;">
+											<span>Sont heureux de vous inviter au vin d'honneur </span>
+											<span ng-show="mc.lvl==2"> et au repas </span>
+											<span>de leurs mariage, le samedi 8 mars 2042.</span>
 										</h5>
 									</div>
-									
+
 									<br>
-									<hr class="style17"/>
+										<hr class="style17" style="width: 100%;position: absolute;bottom: 50px;" />
 						</div><!-- end container -->
 						<br>
 				</div><!-- end block-hr -->
-				<hr class="style16"/>
-		</div><!-- end section -->
+				<hr class="style16" />
+			</div><!-- end section -->
  
 
    <!-- ****************************  PROGRAMME  **************************** -->
-		<div class="container">
-			<div class="section">
-
-				<div class="row">
-					<div class="col s12 center">
-						<h3>
-							<i class="mdi-content-send brown-text"></i>
-						</h3>
-						<h4><span>Programme</span></h4>
-
-						<div class="col s12 m3">
-							<div class="icon-block">
-								<h2 class="center brown-text">
-									<i></i>
-								</h2>
-								<h5 class="center"><span>Mairie</span></h5>
-
-								<p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-							</div>
-						</div>
-
-						<div class="col s12 m3">
-							<div class="icon-block">
-								<h2 class="center brown-text">
-									<i></i>
-								</h2>
-								<h5 class="center"><span>Vin d'honneur</span></h5>
-
-								<p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-							</div>
-						</div>
-
-						<div class="col s12 m3">
-							<div class="icon-block">
-								<h2 class="center brown-text">
-									<i></i>
-								</h2>
-								<h5 class="center"><span>Cérémonie</span></h5>
-
-								<p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-							</div>
-						</div>
-
-						<div class="col s12 m3">
-							<div class="icon-block">
-								<h2 class="center brown-text">
-									<i></i>
-								</h2>
-								<h5 class="center"><span>Soirée</span></h5>
-
-								<p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-   <!-- ****************************  LIEUX  **************************** -->
-		<div class="parallax-container valign-wrapper not-so-small">
-			<div class="section no-pad-bot valign">
-				<div class="container">
-					<div class="row center">
-						<h4><span>Lieux</span></h4>
-						<h5 class="header col s12 light">La cérémonie à la mairie se situera à Londres, et la soirée
-							chez Hagrid. Il faut prévoir 9H de trajet entre les deux sites.</h5>
-					</div>
-				</div>
-			</div>
-			<div class="parallax">
-				<img src="img/img6.jpg" alt="Unsplashed background img 3">
-			</div>
-		</div>
-  
-     <!-- ****************************  CARDS LIEUX  **************************** -->
-		<div class="grey lighten-5">
 			<div class="container">
 				<div class="section">
 
 					<div class="row">
-						<div class="col s12 m6">
+						<div class="col s12 center">
+							<h3>
+								<i class="mdi-content-send brown-text"></i>
+							</h3>
+							<h4>
+								<span>Programme</span>
+							</h4>
 
-							<div class="card hoverable">
-								<div class="card-image waves-effect waves-block waves-light">
-									<img class="activator img-card" src="img/mairie.jpg" style="">
-								</div>
-								<div class="card-content">
-									<span class="card-title activator grey-text text-darken-4">
-										<span>Mairie de Londres</span>
-										<i class="material-icons right">info</i>
-									</span>
-									<p> 14h00 à 16h00</p>
-								</div><!-- end card content -->
-								
-								<div class="card-reveal">
-									<span class="card-title grey-text text-darken-4">
-										Mairie de Londres
-										<i class="material-icons right">close</i>
-									</span>
-									<p>
-										Horaire : Cérémonie à 15h
-										<br />
-										Adresse : 10 rue du mt blanc. 735246 France
-										<br />
-										Rendez-vous à l'arret de bus à côté.
-										<br />
-										<br />
-										Distance depuis Grenoble : 8H45 minutes en voiture.
-										<br />
-									</p>
-								</div><!-- end card reveal -->
-							</div><!-- end card -->
-						</div> <!-- end col -->
+							<div class="col s12 m3">
+								<div class="icon-block">
+									<h2 class="center brown-text">
+										<i></i>
+									</h2>
+									<h5 class="center">
+										<span>Mairie</span>
+									</h5>
 
-						<div class="col s12 m6">
-							<div class="card hoverable">
-								<div class="card-image waves-effect waves-block waves-light">
-									<img class="activator img-card" src="img/salle.jpg">
-								</div>
-								<div class="card-content">
-									<span class="card-title activator grey-text text-darken-4">
-										Chez Hagrid
-										<i class="material-icons right">info</i>
-									</span>
-									<p> 17h00 à ∞ (et au delà)</p>
-								</div>
-								<div class="card-reveal">
-									<span class="card-title grey-text text-darken-4">
-										Chez Hagrid
-										<i class="material-icons right">close</i>
-									</span>
-									<p>
-										Horaire : Réception à 19h
-										<br />
-										Adresse : 11 rue du mt blanc. 735246 France
-										<br />
-										<br />
-										Distance depuis la mairie : 11H45 minutes en voiture.
-										<br />
-									</p>
+									<p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 								</div>
 							</div>
-						</div> <!-- end col -->
-					</div> <!-- end row -->
-				</div> <!-- end section -->
-			</div> <!-- end container -->
-		</div> <!-- end cont color -->
+
+							<div class="col s12 m3">
+								<div class="icon-block">
+									<h2 class="center brown-text">
+										<i></i>
+									</h2>
+									<h5 class="center">
+										<span>Vin d'honneur</span>
+									</h5>
+
+									<p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+								</div>
+							</div>
+
+							<div class="col s12 m3">
+								<div class="icon-block">
+									<h2 class="center brown-text">
+										<i></i>
+									</h2>
+									<h5 class="center">
+										<span>Cérémonie</span>
+									</h5>
+
+									<p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+								</div>
+							</div>
+
+							<div class="col s12 m3">
+								<div class="icon-block">
+									<h2 class="center brown-text">
+										<i></i>
+									</h2>
+									<h5 class="center">
+										<span>Soirée</span>
+									</h5>
+
+									<p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+   <!-- ****************************  LIEUX  **************************** -->
+			<div class="parallax-container valign-wrapper not-so-small" style="min-height:50vh;">
+				<div class="section no-pad-bot valign">
+					<div class="container">
+						<div class="row center">
+							<h4>
+								<span>Lieux</span>
+							</h4>
+							<h5 class="header col s12 light">La cérémonie à la mairie se situera à Londres, et la soirée
+								chez Hagrid. Il faut prévoir 9H de trajet entre les deux sites.</h5>
+						</div>
+					</div>
+				</div>
+				<div class="parallax">
+					<img src="img/img6.jpg" alt="Unsplashed background img 3">
+				</div>
+			</div>
+  
+     <!-- ****************************  CARDS LIEUX  **************************** -->
+			<div class="grey lighten-5">
+				<div class="container">
+					<div class="section">
+
+						<div class="row">
+							<div class="col s12 m6">
+
+								<div class="card hoverable">
+									<div class="card-image waves-effect waves-block waves-light" style="max-height: 200px;">
+										<img class="activator img-card" src="img/mairie.jpg" style="">
+									</div>
+									<div class="card-content">
+										<span class="card-title activator grey-text text-darken-4">
+											<span>Mairie de Londres</span>
+											<i class="material-icons right">info</i>
+										</span>
+										<p> 14h00 à 16h00</p>
+									</div><!-- end card content -->
+
+									<div class="card-reveal">
+										<span class="card-title grey-text text-darken-4">
+											Mairie de Londres
+											<i class="material-icons right">close</i>
+										</span>
+										<p>
+											Horaire : Cérémonie à 15h
+											<br />
+											Adresse : 10 rue du mt blanc. 735246 France
+											<br />
+											Rendez-vous à l'arret de bus à côté.
+											<br />
+											<br />
+											Distance depuis Grenoble : 8H45 minutes en voiture.
+											<br />
+										</p>
+									</div><!-- end card reveal -->
+								</div><!-- end card -->
+							</div> <!-- end col -->
+
+							<div class="col s12 m6">
+								<div class="card hoverable">
+									<div class="card-image waves-effect waves-block waves-light" style="max-height: 200px;">
+										<img class="activator img-card" src="img/salle.jpg">
+									</div>
+									<div class="card-content">
+										<span class="card-title activator grey-text text-darken-4">
+											Chez Hagrid
+											<i class="material-icons right">info</i>
+										</span>
+										<p> 17h00 à ∞ (et au delà)</p>
+									</div>
+									<div class="card-reveal">
+										<span class="card-title grey-text text-darken-4">
+											Chez Hagrid
+											<i class="material-icons right">close</i>
+										</span>
+										<p>
+											Horaire : Réception à 19h
+											<br />
+											Adresse : 11 rue du mt blanc. 735246 France
+											<br />
+											<br />
+											Distance depuis la mairie : 11H45 minutes en voiture.
+											<br />
+										</p>
+									</div>
+								</div>
+							</div> <!-- end col -->
+						</div> <!-- end row -->
+					</div> <!-- end section -->
+				</div> <!-- end container -->
+			</div> <!-- end cont color -->
   
      <!-- ****************************  MAP  **************************** -->
-		<div id="map" style="height:300px; width:100%;"></div>
+			<div id="map" style="height:50vh; width:100%;"></div>
 
      <!-- ****************************  HEBERGEMENT  **************************** -->
-		<div class="container">
-			<div class="section">
-
-				<div class="row">
-					<div class="col s12 center">
-						<h3>
-							<i class="mdi-content-send brown-text"></i>
-						</h3>
-						<h4>Hébergement</h4>
-						<p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-							scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non
-							consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo,
-							ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et
-							pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin
-							diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi
-							massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget
-							dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in
-							faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-					</div>
-				</div>
-			</div>
-		</div>
-  
-     <!-- ****************************  ORGANISATION  **************************** -->
-		<div class="parallax-container valign-wrapper">
-			<div class="section no-pad-bot">
-				<div class="container">
-					<div class="row center">
-						<h4>Organisation</h4>
-						<h5 class="header col s12 light">RASP plz aux invits</h5>
-					</div>
-				</div>
-			</div>
-			<div class="parallax">
-				<img src="background3.jpg" alt="Unsplashed background img 3">
-			</div>
-		</div>
-  
-       <!-- ****************************  Pour venir  **************************** -->
-		<div class="container center">
-			<div class="section">
-				<h4>Pour venir</h4>
-			</div><!-- end section -->
-		</div><!-- end container -->
-
-		<!-- AVION -->
-		<div class="teal lighten-5">
 			<div class="container">
 				<div class="section">
+
+					<div class="row">
+						<div class="col s12 center">
+							<h3>
+								<i class="mdi-content-send brown-text"></i>
+							</h3>
+							<h4>Hébergement</h4>
+							<p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+								scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non
+								consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo,
+								ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere
+								et
+								pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin
+								diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi
+								massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget
+								dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in
+								faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+						</div>
+					</div>
+				</div>
+			</div>
+  
+     <!-- ****************************  ORGANISATION  **************************** -->
+			<div class="parallax-container valign-wrapper">
+				<div class="section no-pad-bot">
+					<div class="container">
+						<div class="row center">
+							<h4>Organisation</h4>
+							<h5 class="header col s12 light">RASP plz aux invits</h5>
+						</div>
+					</div>
+				</div>
+				<div class="parallax">
+					<img src="background3.jpg" alt="Unsplashed background img 3">
+				</div>
+			</div>
+  
+       <!-- ****************************  Pour venir  **************************** -->
+			<div class="container center">
+				<div class="section">
+					<h4>Pour venir</h4>
+				</div><!-- end section -->
+			</div><!-- end container -->
+
+		<!-- AVION -->
+			<div class="teal lighten-5">
+				<div class="container">
+					<div class="section">
+						<div class="row center">
+							<div class="col s12 m6">
+								<h5>
+									<i class="mdi-content-send big-icons circle">&#x2708;</i>
+									<span>Aeroport de Genève</span>
+								</h5>
+								<span>1H25 de La rochette, 1H35 de Grenoble</span>
+							</div><!-- end col -->
+
+							<div class="col s12 m6">
+								<h5>
+									<i class="mdi-content-send big-icons circle">&#x2708;</i>
+									<span>Aeroport de Lyon</span>
+								</h5>
+								<span>1H20 de La rochette, 1H00 de Grenoble</span>
+							</div><!-- end col -->
+						</div><!-- end row -->
+					</div><!-- end section -->
+				</div><!-- end container -->
+			</div><!-- end color div -->
+
+			<div class="container">
+				<div class="section">
+			<!-- TRAIN -->
 					<div class="row center">
-						<div class="col s12 m6">
+
+						<div class="col s12 m4">
 							<h5>
-								<i class="mdi-content-send big-icons circle">&#x2708;</i>
-								<span>Aeroport de Genève</span>
+								<i class="mdi-content-send big-icons circle">&#x1f684;</i>
+								<span>Gare de Pontcharra</span>
 							</h5>
-							<span>1H25 de La rochette, 1H35 de Grenoble</span>
+							<span>15min de La rochette</span>
 						</div><!-- end col -->
 
-						<div class="col s12 m6">
+						<div class="col s12 m4">
 							<h5>
-								<i class="mdi-content-send big-icons circle">&#x2708;</i>
-								<span>Aeroport de Lyon</span>
+								<i class="mdi-content-send big-icons circle">&#x1f684;</i>
+								<span>Gare de Grenoble</span>
 							</h5>
-							<span>1H20 de La rochette, 1H00 de Grenoble</span>
+							<span>50 min de La rochette</span>
+						</div><!-- end col -->
+
+						<div class="col s12 m4">
+							<h5>
+								<i class="mdi-content-send big-icons circle">&#x1f684;</i>
+								<span>Gare de Chambéry</span>
+							</h5>
+							<span>35min de La rochette, 50min de Grenoble</span>
 						</div><!-- end col -->
 					</div><!-- end row -->
 				</div><!-- end section -->
 			</div><!-- end container -->
-		</div><!-- end color div -->
-		
-		<div class="container">
-			<div class="section">
-			<!-- TRAIN -->
-				<div class="row center">
-
-					<div class="col s12 m4">
-						<h5>
-							<i class="mdi-content-send big-icons circle">&#x1f684;</i>
-							<span>Gare de Pontcharra</span>
-						</h5>
-						<span>15min de La rochette</span>
-					</div><!-- end col -->
-
-					<div class="col s12 m4">
-						<h5>
-							<i class="mdi-content-send big-icons circle">&#x1f684;</i>
-							<span>Gare de Grenoble</span>
-						</h5>
-						<span>50 min de La rochette</span>
-					</div><!-- end col -->
-
-					<div class="col s12 m4">
-						<h5>
-							<i class="mdi-content-send big-icons circle">&#x1f684;</i>
-							<span>Gare de Chambéry</span>
-						</h5>
-						<span>35min de La rochette, 50min de Grenoble</span>
-					</div><!-- end col -->
-				</div><!-- end row -->
-			</div><!-- end section -->
-		</div><!-- end container -->
+  
+  
   
    <!-- ****************************  FOOTER  **************************** -->
-		<footer class="page-footer teal">
-			<div class="container">
-				<div class="row">
-					<div class="col l6 s12">
-						<h5 class="white-text">Pour nous contacter</h5>
-						<p class="grey-text text-lighten-4">
-							Par mail au truc@super-adresse.love.
-							<br>
-								Céline et Thomas ou nos familles par téléphone, de préférence en
-								soirée.
-						</p>
-					</div>
+			<footer class="page-footer teal">
+				<div class="container">
+					<div class="row">
+						<div class="col l6 s12">
+							<h5 class="white-text">Pour nous contacter</h5>
+							<p class="grey-text text-lighten-4">
+								Par mail au truc@super-adresse.love.
+								<br>
+									Céline et Thomas ou nos familles par téléphone, de préférence en
+									soirée.
+							</p>
+						</div>
 
-					<div class="col l6 s12">
-						<h5 class="white-text">A ne pas oublier ...</h5>
-						<ul class="grey-text text-lighten-4">
-							<li> - Votre plus beau sourire</li>
-							<li> - Une tenue de saison (d'hiver)</li>
-							<li> - Un parapluie (même si on croise les doigts)</li>
-							<li> - Nous prévenir si vous serez présent</li>
-						</ul>
+						<div class="col l6 s12">
+							<h5 class="white-text">A ne pas oublier ...</h5>
+							<ul class="grey-text text-lighten-4">
+								<li> - Votre plus beau sourire</li>
+								<li> - Une tenue de saison (d'hiver)</li>
+								<li> - Un parapluie (même si on croise les doigts)</li>
+								<li> - Nous prévenir si vous serez présent</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-			</div><div ng-view></div>
-			<div class="footer-copyright">
-				<div class="container center">
-					<span style="float:left;">&#x1F490; &#x1F48D; &#x1F492; </span>
-					Céline
-					<span style="    font-size: 2.1em;vertical-align: sub;color: #85e2ff;">&#x26ad;</span>
-					Thomas
-					<span style="float:right;">&#x1F492; &#x1F48D; &#x1F490; </span>
+				<div ng-view></div>
+				<div class="footer-copyright">
+					<div class="container center">
+						<span style="float:left;">&#x1F490; &#x1F48D; &#x1F492; </span>
+						Céline
+						<span style="    font-size: 2.1em;vertical-align: sub;color: #85e2ff;">&#x26ad;</span>
+						Thomas
+						<span style="float:right;">&#x1F492; &#x1F48D; &#x1F490; </span>
+					</div>
 				</div>
-			</div>
-		</footer>
-
+			</footer>
+		</div><!-- end hover container -->
   <!--  Scripts-->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>

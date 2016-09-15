@@ -104,7 +104,7 @@ function MainCtrl($interval, $routeParams, $scope) {
 		
 	this.test = "HOHO"
 	this.currentLang = "FR"
-	this.wedDate = new Date(2017, 7-1, 8, 13, 0, 37, 42)
+	this.wedDate = new Date(2017, 1-1, 21, 14, 30, 0, 42)
 	this.langs = ["fr", "pt", "cr", "br", "en", "esp"]
 	var self = this
 	
