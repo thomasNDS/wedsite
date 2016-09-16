@@ -1,16 +1,6 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
-
-nav ul a,
-nav .brand-logo {
-  color: #444;
-}
-
+/* Custom Stylesheet 
+*/
+ 
 p {
   line-height: 2rem;
 }
@@ -29,30 +19,67 @@ p {
     width: 100%;
   }
 
+/* tablet */
 @media only screen and (max-width : 992px) {
+
+ .tablet-full {
+	min-height: 100vh;
+ }
+
   .parallax-container .section {
     position: absolute;
     top: 40%;
   }
+  
   #index-banner .section {
     top: 10%;
   }
-}
-
-  .not-so-small {
-    min-height: 200px;
-  }
   
-@media only screen and (max-width : 992px) {
   .not-so-small {
     min-height: 300px;
   }
-    .not-so-small>.section {
+  
+  .not-so-small>.section {
 		margin-top: -50px;
   }
+   .tablet-half {
+	min-height: 50vh;
+ }
 }
 
+#index-banner {
+	background-color: #113c4c;
+	background: url(../img/stars2400.jpg);
+	color: white;
+	position: fixed;
+	z-index: 0;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.not-so-small {
+min-height: 200px;
+}
+
+ .all-half {
+	min-height: 50vh;
+ }
+ 
+  .all-full {
+	min-height: 100vh;
+ }
+ 
+/* mobile */
 @media only screen and (max-width : 500px) {
+ .mobile-full {
+	min-height: 100vh;
+ }
+ .mobile-half {
+	min-height: 50vh;
+ }
   #index-banner .section {
     top: 0;
   }
@@ -61,7 +88,12 @@ p {
   }
 }
 
-
+@media only screen and (min-width : 700px) {
+	.large-text {
+		font-size: 2.2em;
+		line-height: 3em;
+	}
+}
 .icon-block {
   padding: 0 15px;
 }
@@ -72,7 +104,7 @@ p {
 footer.page-footer {
   margin: 0;
 }
-
+/************************ LANGS ************************/
 @font-face {
     font-family: klingon;
     src: url(../fonts/klingon.ttf);
@@ -112,7 +144,7 @@ footer.page-footer {
  .el-fix {
   font-family: elfique;
  }
- 
+ /************************ COUNTDOWN ************************/
  .countdown-elt {
     background: white;
     color: black;
@@ -145,7 +177,7 @@ footer.page-footer {
      filter: grayscale(100%);
     -webkit-filter: saturate(40%);
  }
- 
+ /************************ HR BLOCK ************************/
  hr.style16 { 
   border-top: 1px dashed #8c8b8b; 
   margin: 0; 
@@ -164,6 +196,9 @@ hr.style16:after {
 
 .block-hr {
 	background: url(../img/test.jpg);
+	background-attachment: fixed;
+	min-height:50vh; 
+	position: relative;
 }
 
 hr.style17 {
@@ -183,6 +218,7 @@ hr.style17:after {
 	-moz-transform: rotate(60deg);
 	transform: rotate(60deg);
 }
+/************************ BIG ICONS ************************/
 .big-icons{
     padding-right: 0.2em;
     font-size: 1.2em;
