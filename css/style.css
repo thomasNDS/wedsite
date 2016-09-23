@@ -19,6 +19,10 @@ p {
     width: 100%;
   }
 
+  .rsvp label{
+  color: #b9cecc !important;
+  }
+  
 /* tablet */
 @media only screen and (max-width : 992px) {
 

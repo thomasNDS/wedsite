@@ -8,6 +8,7 @@
 
 		<!-- CSS  -->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
 		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
 		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 		<style>
@@ -427,30 +428,114 @@
 					</div>
 				</div>
 			</div>
-  
+						
      <!-- ****************************  ORGANISATION  **************************** -->
-			<div class="parallax-container valign-wrapper all-half">
+			<div class="parallax-container valign-wrapper all-half">   
 				<div class="section no-pad-bot">
 					<div class="container">
+				
 						<div class="row center">
 							<h3>Organisation</h3>
-							<h5 class="header col s12 light">RASP plz aux invits</h5>
-							
-							<form action="https://formspree.io/nds.thomas@gmail.com"
-								  method="POST">
-								<input type="text" name="TEST">
-								<input type="text" name="Truc">
-								<input type="hidden" name="_next" value="ok.html" />
-								<input type="submit" value="Envoyer">
-							</form>
-							
-						</div>
-					</div>
-				</div>
+							<h5 class="header col s12 light">Pensez à nous prévenir dès que possible si vous serez des nôtres pour ce grand jour. 
+							Vous pouvez nous renvoyer le coupon réponse par courrier, ou remplir le formulaire ci-dessous. </h5>
+							<h4>♥ Merci ♥</h4>
+						</div><!-- end row -->
+						
+	
+						
+					</div><!-- end container -->
+				</div><!-- end section -->
+
 				<div class="parallax">
 					<img src="background3.jpg" alt="Unsplashed background img 3">
 				</div>
-			</div>
+			</div><!-- end parralax -->
+  
+  
+    <!-- ****************************  FORM  **************************** -->
+		  <form action="https://formspree.io/nds.thomas@gmail.com" method="POST" class="col s12">
+				<div class="black rsvp all-full valign-wrapper white-text" style="background: url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/stardust.png');">
+				
+					 <div class="container valign">
+						  <div class="row">
+						  <h2 class="s12 center col teal-text" style="font-family: 'Yatra One', cursive;text-shadow: 2px 2px rgba(0, 125, 113, 0.55), 5px 0px 5px #2c3b46;">RSVP</h2>
+						  
+							<div class="input-field col s6">
+							  <i class="material-icons prefix">account_circle</i>
+							  <input id="icon_prefix" type="text" class="validate">
+							  <label for="icon_prefix">Nom Prénom</label>
+							</div>
+							
+							<div class="input-field col s6">
+							  <i class="material-icons prefix">phone</i>
+							  <input id="icon_telephone" type="tel" class="validate">
+							  <label for="icon_telephone">Telephone</label>
+							</div>
+							
+							<div class="input-field col s6">
+							  <i class="material-icons prefix">group</i>
+							  <input id="icon_adult" type="number" class="validate">
+							  <label for="icon_adult">Nombre d'adultes</label>
+							</div>
+							
+							<div class="input-field col s6">
+							  <i class="material-icons prefix">child_friendly</i>
+							  <input id="icon_kid" type="number" class="validate">
+							  <label for="icon_kid">Nombre d'enfants (0-17ans)</label>
+							</div>
+							
+							<div class="input-field col s12">
+							 <i class="material-icons prefix"><i class="material-icons">local_hotel</i></i>
+							<input type="checkbox" id="sleep" class="right"/>
+								  <label for="sleep">Hébergement sur place</label>
+							</div>
+							<br/><br/>
+						</div><!-- end row -->
+						
+						<br/>
+						
+						<div class="row fr">
+							<div class="col s12">
+								Votre série préférée : 
+								
+								 <p class="">
+								  <input class="with-gap" name="group1" type="radio" id="test1" />
+								  <label for="test1">Plus belle la vie</label>
+								</p>
+								<p>
+								  <input class="with-gap" name="group1" type="radio" id="test3"  />
+								  <label for="test3">The Walking Dead</label>
+								</p>
+								<p>
+								  <input class="with-gap" name="group1" type="radio" id="test3" checked />
+								  <label for="test3">Dora l'exploratrice</label>
+								</p>
+								<p>
+								  <input class="with-gap" name="group1" type="radio" id="test2" />
+								  <label for="test2">Games of thrones</label>
+								</p>
+							</div>
+						</div><!-- end row -->
+
+						<hr style="height:1px; border:none; background-color:white; width:30%; " />
+						<br/>
+						
+					  <div class="row">
+						<div class="input-field col s12">
+						  <textarea id="textarea1" class="materialize-textarea"></textarea>
+						  <label for="textarea1">Infos complémentaires</label>
+						</div>
+					  </div><!-- end row -->
+
+						  
+						<div class="center">
+							<input type="submit" value="Envoyer" class="waves-effect waves-light btn"/>
+						</div>
+
+					</div><!-- end row -->
+			</div><!-- end container -->
+		</form>
+  
   
        <!-- ****************************  Pour venir  **************************** -->
 		<div class="mobile-full all-half valign-wrapper">
