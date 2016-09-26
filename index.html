@@ -453,40 +453,45 @@
   
   
     <!-- ****************************  FORM  **************************** -->
-		  <form action="https://formspree.io/nds.thomas@gmail.com" method="POST" class="col s12">
+		  <form action="https://formspree.io/nds.thomas@gmail.com" method="POST" class="col s12" >
 				<div class="black rsvp all-full valign-wrapper white-text" style="background: url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/stardust.png');">
 				
 					 <div class="container valign">
 						  <div class="row">
 						  <h2 class="s12 center col teal-text" style="font-family: 'Yatra One', cursive;text-shadow: 2px 2px rgba(0, 125, 113, 0.55), 5px 0px 5px #2c3b46;">RSVP</h2>
+							
+							<!-- conf -->
+							<input type="hidden" name="_next" value="ok.html" />
+						    <input type="hidden" name="_next" value="ok.html" />
+						    <input type="hidden" name="_subject" value="WED_PLANNING : new submission !" />
 						  
 							<div class="input-field col s6">
 							  <i class="material-icons prefix">account_circle</i>
-							  <input id="icon_prefix" type="text" class="validate">
+							  <input id="icon_prefix" type="text" class="validate" name="nomPrenom" />
 							  <label for="icon_prefix">Nom Prénom</label>
 							</div>
 							
 							<div class="input-field col s6">
 							  <i class="material-icons prefix">phone</i>
-							  <input id="icon_telephone" type="tel" class="validate">
+							  <input id="icon_telephone" type="tel" class="validate" name="tel" />
 							  <label for="icon_telephone">Telephone</label>
 							</div>
 							
 							<div class="input-field col s6">
 							  <i class="material-icons prefix">group</i>
-							  <input id="icon_adult" type="number" class="validate">
+							  <input id="icon_adult" type="number" class="validate" name="adultes" />
 							  <label for="icon_adult">Nombre d'adultes</label>
 							</div>
 							
 							<div class="input-field col s6">
 							  <i class="material-icons prefix">child_friendly</i>
-							  <input id="icon_kid" type="number" class="validate">
+							  <input id="icon_kid" type="number" class="validate" name="momes" />
 							  <label for="icon_kid">Nombre d'enfants (0-17ans)</label>
 							</div>
 							
 							<div class="input-field col s12">
 							 <i class="material-icons prefix"><i class="material-icons">local_hotel</i></i>
-							<input type="checkbox" id="sleep" class="right"/>
+							<input type="checkbox" id="sleep" class="right" name="hebergemement" />
 								  <label for="sleep">Hébergement sur place</label>
 							</div>
 							<br/><br/>
@@ -498,7 +503,7 @@
 							<div class="col s12">
 								Votre série préférée : 
 								
-								 <p class="">
+								<p class="">
 								  <input class="with-gap" name="group1" type="radio" id="test1" />
 								  <label for="test1">Plus belle la vie</label>
 								</p>
