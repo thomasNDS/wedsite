@@ -457,12 +457,11 @@
 				<div class="black rsvp all-full valign-wrapper white-text" style="background: url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/stardust.png');">
 				
 					 <div class="container valign">
-						  <div class="row">
+						<div class="row">
 						  <h2 class="s12 center col teal-text" style="font-family: 'Yatra One', cursive;text-shadow: 2px 2px rgba(0, 125, 113, 0.55), 5px 0px 5px #2c3b46;">RSVP</h2>
 							
 							<!-- conf -->
 							<input type="hidden" name="_next" value="ok.html" />
-						    <input type="hidden" name="_next" value="ok.html" />
 						    <input type="hidden" name="_subject" value="WED_PLANNING : new submission !" />
 						  
 							<div class="input-field col s6">
@@ -494,47 +493,48 @@
 							<input type="checkbox" id="sleep" class="right" name="hebergemement" />
 								  <label for="sleep">Hébergement sur place</label>
 							</div>
-							<br/><br/>
+							<br/>
+							<br/>
 						</div><!-- end row -->
 						
-						<br/>
-						
-						<div class="row fr">
-							<div class="col s12">
-								Votre série préférée : 
-								
-								<p class="">
-								  <input class="with-gap" name="group1" type="radio" id="test1" />
-								  <label for="test1">Plus belle la vie</label>
-								</p>
-								<p>
-								  <input class="with-gap" name="group1" type="radio" id="test3"  />
-								  <label for="test3">The Walking Dead</label>
-								</p>
-								<p>
-								  <input class="with-gap" name="group1" type="radio" id="test3" checked />
-								  <label for="test3">Dora l'exploratrice</label>
-								</p>
-								<p>
-								  <input class="with-gap" name="group1" type="radio" id="test2" />
-								  <label for="test2">Games of thrones</label>
-								</p>
-							</div>
-						</div><!-- end row -->
-
-						<hr style="height:1px; border:none; background-color:white; width:30%; " />
 						<br/>
 						
 					  <div class="row">
 						<div class="input-field col s12">
-						  <textarea id="textarea1" class="materialize-textarea"></textarea>
+						  <textarea id="textarea1" name="complements" class="materialize-textarea"></textarea>
 						  <label for="textarea1">Infos complémentaires</label>
 						</div>
 					  </div><!-- end row -->
-
+					  
+						<!-- <hr style="height:1px; border:none; background-color:teal; width:30%;" /> -->
+						<br/>
+					  <div class=" fr">
+						Votre série préférée : 
+							<div class="row">
+									
+								<p class="col s6 m3">
+								  <input class="with-gap" name="group1" type="radio" id="test1" ng-model="mc.serie" value="Plus belle la vie"/>
+								  <label for="test1">Plus belle la vie</label>
+								</p>
+								<p class="col s6 m3">
+								  <input class="with-gap" name="group1" type="radio" id="test2" ng-model="mc.serie" value="2" />
+								  <label for="test2">The Walking Dead</label>
+								</p>
+								<p class="col s6 m3">
+								  <input class="with-gap" name="group1" type="radio" id="test3" ng-model="mc.serie" value="3" checked />
+								  <label for="test3">Dora l'exploratrice</label>
+								</p>
+								<p class="col s6 m3">
+								  <input class="with-gap" name="group1" type="radio" id="test4" ng-model="mc.serie" value="4" />
+								  <label for="test4">Games of thrones</label>
+								</p>
+							</div><!-- end row -->
+						</div><!-- end fr -->
+						  
+						  <input type="hidden" name="serie" value="{{mc.serie}}" />
 						  
 						<div class="center">
-							<input type="submit" value="Envoyer" class="waves-effect waves-light btn"/>
+							<input type="submit" value="Envoyer" class="waves-effect waves-light btn" style="margin:1em;"/>
 						</div>
 
 					</div><!-- end row -->
