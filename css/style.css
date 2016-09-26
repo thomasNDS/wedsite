@@ -22,8 +22,16 @@ p {
   .rsvp label{
   color: #b9cecc !important;
   }
-  
-/* tablet */
+ 
+ .all-half {
+	min-height: 50vh;
+ }
+ 
+  .all-full {
+	min-height: 100vh;
+ }
+ 
+/* Tablet */
 @media only screen and (max-width : 992px) {
 
  .tablet-full {
@@ -67,14 +75,6 @@ p {
 .not-so-small {
 min-height: 200px;
 }
-
- .all-half {
-	min-height: 50vh;
- }
- 
-  .all-full {
-	min-height: 100vh;
- }
  
 /* mobile */
 @media only screen and (max-width : 500px) {

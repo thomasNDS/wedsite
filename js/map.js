@@ -61,6 +61,7 @@
 		var infowindowMorelli = new google.maps.InfoWindow({
 			content: "Casa Morelli"
 		  });
+		  
 		markerMorelli.addListener('click', function() {
 			infowindowMorelli.open(map, markerMorelli);
 		});

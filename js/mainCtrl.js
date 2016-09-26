@@ -12,24 +12,19 @@ function MainCtrl($interval, $routeParams, $scope) {
 		if (dateNow.getMilliseconds() > self.wedDate.getMilliseconds()) {
 	
 			self.monthCd = self.wedDate.getMonth() - dateNow.getMonth()
-			self.dayCd = self.wedDate.getDay() - dateNow.getDay()
+			self.dayCd = self.wedDate.getDate() - dateNow.getDate()
 			self.hourCd = self.wedDate.getHours() - dateNow.getHours()
 			self.minCd = self.wedDate.getMinutes() - dateNow.getMinutes()
 			self.secCd = self.wedDate.getSeconds() - dateNow.getSeconds()
-	
-			if (self.secCd<0) {
-				self.secCd+=60
-				self.minCd--
-			}
 			
-			if (self.minCd<0) {
-				self.minCd+=60
-				self.hourCd--
-			}
+			console.debug("month:" + self.monthCd)
+			console.debug("dayCd:" + self.dayCd)
+			console.debug("hourCd:" + self.hourCd)
+			console.debug("minCd:" + self.minCd)
+			console.debug("secCd:" + self.secCd)
 			
-			if (self.hourCd<0) {
-				self.hourCd+=24
-				self.dayCd--
+			if (self.monthCd<0) {
+				self.monthCd+=12
 			}
 			
 			if (self.dayCd<0) {
@@ -37,9 +32,27 @@ function MainCtrl($interval, $routeParams, $scope) {
 				self.monthCd--
 			}
 			
-			if (self.monthCd<0) {
-				self.monthCd+=12
+			if (self.hourCd<0) {
+				self.hourCd+=24
+				self.dayCd--
 			}
+	
+			if (self.minCd<0) {
+				self.minCd+=60
+				self.hourCd--
+			}
+			
+			if (self.secCd<0) {
+				self.secCd+=60
+				self.minCd--
+			}
+
+			
+			console.debug("month:" + self.monthCd)
+			console.debug("dayCd:" + self.dayCd)
+			console.debug("hourCd:" + self.hourCd)
+			console.debug("minCd:" + self.minCd)
+			console.debug("secCd:" + self.secCd)
 		}
     }
 	
@@ -117,7 +130,6 @@ function MainCtrl($interval, $routeParams, $scope) {
 	self.lvl = 1
 	
 	// Init
-	console.log("INIT")
 	this.updateCountDown()
 	$interval(this.updateCountDown, 1000);
 		  
