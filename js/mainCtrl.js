@@ -126,7 +126,7 @@ function MainCtrl($interval, $routeParams, $scope) {
 	self.hourCd = 0
 	self.minCd = 0
 	self.secCd = 0
-	
+	self.here = 'true'
 	self.lvl = 1
 	
 	// Init
