@@ -127,6 +127,7 @@ function MainCtrl($interval, $routeParams, $scope) {
 	self.minCd = 0
 	self.secCd = 0
 	self.here = 'true'
+	self.serie = 'dora'
 	self.lvl = 1
 	
 	// Init
