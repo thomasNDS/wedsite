@@ -4,6 +4,7 @@
 function MainCtrl($interval, $routeParams, $scope) {
 
 	// Functions ********************************************************************
+	
 	/** */
     this.updateCountDown = function(dateNow){
 	
@@ -16,12 +17,6 @@ function MainCtrl($interval, $routeParams, $scope) {
 			self.hourCd = self.wedDate.getHours() - dateNow.getHours()
 			self.minCd = self.wedDate.getMinutes() - dateNow.getMinutes()
 			self.secCd = self.wedDate.getSeconds() - dateNow.getSeconds()
-			
-			console.debug("month:" + self.monthCd)
-			console.debug("dayCd:" + self.dayCd)
-			console.debug("hourCd:" + self.hourCd)
-			console.debug("minCd:" + self.minCd)
-			console.debug("secCd:" + self.secCd)
 			
 			if (self.monthCd<0) {
 				self.monthCd+=12
@@ -69,7 +64,7 @@ function MainCtrl($interval, $routeParams, $scope) {
 		self.currentLang = 'KL'
     }
 	
-		/** */
+	/** */
     this.switchLangToEl = function(){
 		console.log("switchLangToEl")
 		self.switchLang('fr')
@@ -103,7 +98,7 @@ function MainCtrl($interval, $routeParams, $scope) {
 	   [].forEach.call(els, function(el) {el.style.display = 'block' });
 	}
 		
-	// Attributes
+	// Attributes ********************************************************************
 	
 	this.sheet = (function() {
 			var style = document.createElement("style");
@@ -112,7 +107,6 @@ function MainCtrl($interval, $routeParams, $scope) {
 			return style.sheet;
 		})();
 		
-	this.test = "HOHO"
 	this.currentLang = "FR"
 	this.wedDate = new Date(2017, 1-1, 21, 14, 30, 0, 42)
 	this.langs = ["fr", "pt", "cr", "br", "en", "esp"]
