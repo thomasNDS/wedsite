@@ -47,12 +47,6 @@ function MainCtrl($interval, $routeParams, $scope) {
 				self.minCd--
 			}
 
-			
-			console.debug("month:" + self.monthCd)
-			console.debug("dayCd:" + self.dayCd)
-			console.debug("hourCd:" + self.hourCd)
-			console.debug("minCd:" + self.minCd)
-			console.debug("secCd:" + self.secCd)
 		}
     }
 	
@@ -72,6 +66,7 @@ function MainCtrl($interval, $routeParams, $scope) {
 		console.log("switchLangToKl")
 		self.switchLang('fr')
 		this.addCSSRule(self.sheet, ".fr,.cv", 'font-family: "klingon", sans-serif;', 0);
+		self.currentLang = 'KL'
     }
 	
 		/** */
@@ -79,12 +74,14 @@ function MainCtrl($interval, $routeParams, $scope) {
 		console.log("switchLangToEl")
 		self.switchLang('fr')
 		this.addCSSRule(self.sheet, ".fr,.cv", 'font-family: "elfique", sans-serif;', 0);
+		self.currentLang = 'EL'
     }
 	
 	/** */
     this.switchLang = function(lang){
 		console.log(lang)
 		self.currentLang = lang
+		
 		if (self.sheet.rules && self.sheet.rules.length > 0) {
 			self.sheet.deleteRule(0)
 		}
