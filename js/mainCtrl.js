@@ -61,7 +61,7 @@ function MainCtrl($interval, $routeParams, $scope) {
 		console.log("switchLangToKl")
 		self.switchLang('fr')
 		this.addCSSRule(self.sheet, ".fr,.cv", 'font-family: "klingon", sans-serif;', 0);
-		self.currentLang = 'KL'
+		self.currentLang = 'KLING'
     }
 	
 	/** */
@@ -69,7 +69,7 @@ function MainCtrl($interval, $routeParams, $scope) {
 		console.log("switchLangToEl")
 		self.switchLang('fr')
 		this.addCSSRule(self.sheet, ".fr,.cv", 'font-family: "elfique", sans-serif;', 0);
-		self.currentLang = 'EL'
+		self.currentLang = 'ELFIQUE'
     }
 	
 	/** */

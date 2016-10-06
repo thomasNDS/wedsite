@@ -37,11 +37,6 @@ p {
  .tablet-full {
 	min-height: 100vh;
  }
-
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
   
   #index-banner .section {
     top: 10%;
@@ -233,4 +228,7 @@ hr.style17:after {
     color: #dfe8e7;
 }
 
-
+.rsvp-title {
+	font-family: 'Yatra One', cursive;
+	text-shadow: 2px 2px rgba(0, 125, 113, 0.55), 5px 0px 5px #2c3b46;
+}
