@@ -59,48 +59,49 @@
    
 		<!-- desktop -->
 		<div class="" style="top: 1em; right: 0; position: fixed; z-index: 1; width:100%;"> 
-		<div class="container" >
-		<div class="right" >
-			<!-- Dropdown Structure -->
-			<ul id='dropdown1' class='dropdown-content'>
-				<li>
-					<a ng-click="mc.switchLang('fr')" href="#!">Français</a>
-				</li>
-				<li>
-					<a ng-click="mc.switchLang('pt')" href="#!">Portugais</a>
-				</li>
-				<li>
-					<a ng-click="mc.switchLang('cr')" href="#!">Corse</a>
-				</li>
-				<li>
-					<a ng-click="mc.switchLang('br')" href="#!">Breton</a>
-				</li>
-				<li>
-					<a ng-click="mc.switchLang('en')" href="#!">English</a>
-				</li>
-				<li>
-					<a class="kl-fix" ng-click="mc.switchLangToKl()" href="#!">Klingon</a>
-				</li>
-				<li>
-					<a class="el-fix" ng-click="mc.switchLangToEl()" href="#!">Elfique</a>
-				</li>
-			</ul>
-			
-			<!-- Mobile -->
-			<a class='hide-on-med-and-up  button-collapse btn-floating btn-large waves-effect waves-light' href='#'
-				data-activates='nav-mobile'>
-				<i class="material-icons">flag</i>
-			</a>
-
-			<a class='dropdown-button btn hide-on-small-only btn-floating btn-large waves-effect waves-light'
-				href='#' data-activates='dropdown1'>
-				{{mc.currentLang}}
-			</a>
-
-		</div><!-- end right -->
-		</div><!-- end container -->
-		</div><!-- end right -->
+			<div class="container" >
+				<div class="right" >
+					<!-- Dropdown Structure -->
+					<ul id='dropdown1' class='dropdown-content'>
+						<li>
+							<a ng-click="mc.switchLang('fr')" href="#!">Français</a>
+						</li>
+						<li>
+							<a ng-click="mc.switchLang('pt')" href="#!">Portugais</a>
+						</li>
+						<li>
+							<a ng-click="mc.switchLang('cr')" href="#!">Corse</a>
+						</li>
+						<li>
+							<a ng-click="mc.switchLang('br')" href="#!">Breton</a>
+						</li>
+						<li>
+							<a ng-click="mc.switchLang('en')" href="#!">English</a>
+						</li>
+						<li>
+							<a class="kl-fix" ng-click="mc.switchLangToKl()" href="#!">Klingon</a>
+						</li>
+						<li>
+							<a class="el-fix" ng-click="mc.switchLangToEl()" href="#!">Elfique</a>
+						</li>
+					</ul>
 					
+					<!-- Mobile -->
+					<a class='hide-on-med-and-up  button-collapse btn-floating btn-large waves-effect waves-light' href='#'
+						data-activates='nav-mobile'>
+						<i class="material-icons">flag</i>
+					</a>
+
+					<a class='dropdown-button btn hide-on-small-only btn-floating btn-large waves-effect waves-light'
+						href='#' data-activates='dropdown1'>
+						{{mc.currentLang}}
+					</a>
+
+				</div><!-- end right -->
+			</div><!-- end container -->
+		</div><!-- end right -->
+		
+		<!-- HEADER -->
 		<div id="index-banner" class="valign-wrapper" style="">
 			<div class="section no-pad-bot valign" style="width:100%; font-size: 1.1em;">
 				<div class="container">
@@ -166,12 +167,12 @@
 							<span class="cr"> seconde </span>
 							<span class="br"> eilennoù </span>
 						</div>
-					</div>
+					</div><!-- end row -->
 					<br />
 					<br />
-				</div>
-			</div>
-		</div>
+				</div><!-- end container -->
+			</div><!-- end section -->
+		</div><!-- end banner -->
 
 
  <!-- ****************************  NOUS section  **************************** -->
@@ -217,7 +218,7 @@
 										<span class="cr"> sabbatu, 21 di jinnaru, 2017. </span>
 										<span class="br"> 21/01/2017 </span>
 									</h5>
-								</div>
+								</div><!-- end row -->
 
 								<hr class="style17" style="width: 100%;position: absolute;bottom: 50px;" />
 						</div><!-- end container -->
@@ -228,97 +229,93 @@
 
    <!-- ****************************  PROGRAMME  **************************** -->
 			<div class="container mobile-full all-half valign-wrapper">
-				<div class="section valign">
+				<div class="section valign row" style="width: 100%;">
 
-					<div class="row">
+					
 						<div class="col s12 center">
-							<h3>
-								<i class="mdi-content-send brown-text"></i>
-							</h3>
 							<h3>
 									<span class="fr">Programme</span>
 									<span class="en"> Planning</span>
 									<span class="cr">urbanisimu</span>
 									<span class="br"> Program</span>
 							</h3>
-							
-							<div class="col s12 m3">
-								<div class="icon-block">
-									<h2 class="center brown-text">
-										<i></i>
-									</h2>
-									<h5 class="center">
-										<span class="fr">Mairie</span>
-										<span class="en">City hall</span>
-										<span class="cr">Municipio</span>
-										<span class="br">Maerdi</span>
-									</h5>
-									<h6 class="center">
-										<span>15h00</span>
-									</h6>
+						</div><!-- end col -->
+						
+						<div class="col s12 m3">
+							<div class="icon-block">
+								<h2 class="center brown-text">
+									<i></i>
+								</h2>
+								<h5 class="center">
+									<span class="fr">Mairie</span>
+									<span class="en">City hall</span>
+									<span class="cr">Municipio</span>
+									<span class="br">Maerdi</span>
+								</h5>
+								<h6 class="center">
+									<span>15h00</span>
+								</h6>
 
-									<p class="light">Mariage en mairie</p>
-								</div>
+								<p class="light center">Mariage en mairie</p>
 							</div>
-							
-							<div class="col s12 m3">
-								<div class="icon-block">
-									<h2 class="center brown-text">
-										<i></i>
-									</h2>
-									<h5 class="center">
-										<span class="fr">Cérémonie</span>
-										<span class="en">Ceremony</span>
-										<span class="cr">Cirimonia</span>
-										<span class="br">Evel </span>
-									</h5>
-									<h6 class="center">
-										<span>16H15</span>
-									</h6>
-									<p class="light">Cérémonie laique au château d'Escart</p>
-								</div>
+						</div><!-- end col -->
+						
+						<div class="col s12 m3">
+							<div class="icon-block">
+								<h2 class="center brown-text">
+									<i></i>
+								</h2>
+								<h5 class="center">
+									<span class="fr">Cérémonie</span>
+									<span class="en">Ceremony</span>
+									<span class="cr">Cirimonia</span>
+									<span class="br">Evel </span>
+								</h5>
+								<h6 class="center">
+									<span>16H15</span>
+								</h6>
+								<p class="light center">Cérémonie laique au château</p>
 							</div>
-							
-							<div class="col s12 m3">
-								<div class="icon-block">
-									<h2 class="center brown-text">
-										<i></i>
-									</h2>
-									<h5 class="center">
-										<span class="fr">Vin d'honneur</span>
-										<span class="en">Wine reception</span>
-										<span class="cr">Wine d 'onuri</span>
-										<span class="br">Fest-gouezwin </span>
-									</h5>
-									<h6 class="center">
-										<span>17H00</span>
-									</h6>
-									<p class="light">Cocktail au château</p>
-								</div>
+						</div><!-- end col -->
+						
+						<div class="col s12 m3">
+							<div class="icon-block">
+								<h2 class="center brown-text">
+									<i></i>
+								</h2>
+								<h5 class="center">
+									<span class="fr">Vin d'honneur</span>
+									<span class="en">Wine reception</span>
+									<span class="cr">Wine d 'onuri</span>
+									<span class="br">Fest-gouezwin </span>
+								</h5>
+								<h6 class="center">
+									<span>17H00</span>
+								</h6>
+								<p class="light center">Cocktail au château</p>
 							</div>
+						</div><!-- end col -->
 
-							<div class="col s12 m3">
-								<div class="icon-block">
-									<h2 class="center brown-text">
-										<i></i>
-									</h2>
-									<h5 class="center">
-										<span class="fr">Soirée</span>
-										<span class="en">Soiree</span>
-										<span class="cr">Attrachjata</span>
-										<span class="br">Fest-noz</span>
-									</h5>
-									<h6 class="center">
-										<span>20H00</span>
-									</h6>
-									<p class="light">Repas et soirée dansante</p>
-								</div>
+						<div class="col s12 m3">
+							<div class="icon-block">
+								<h2 class="center brown-text">
+									<i></i>
+								</h2>
+								<h5 class="center">
+									<span class="fr">Soirée</span>
+									<span class="en">Soiree</span>
+									<span class="cr">Attrachjata</span>
+									<span class="br">Fest-noz</span>
+								</h5>
+								<h6 class="center">
+									<span>20H00</span>
+								</h6>
+								<p class="light center">Repas et soirée dansante</p>
 							</div>
-						</div>
-					</div>
+						</div><!-- end col -->
 
-				</div>
-			</div>
+				</div><!-- end section -->
+			</div><!-- end container -->
 
    <!-- ****************************  LIEUX  **************************** -->
 			<div class="parallax-container valign-wrapper mobile-full all-half">
@@ -471,7 +468,7 @@
 			</div><!-- end parralax -->
   
   
-    <!-- ****************************  FORM  **************************** -->
+    <!-- ****************************  FORM RSVP **************************** -->
 		  <form action="https://formspree.io/nds.thomas@gmail.com" method="POST" class="col s12" >
 				<div class="black rsvp all-full valign-wrapper white-text" style="background: url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/stardust.png');">
 				
@@ -483,13 +480,14 @@
 							<input type="hidden" name="_next" value="ok.html" />
 						    <input type="hidden" name="_subject" value="WED_PLANNING : new submission !" />
 						  
+							<!-- NAME -->
 							<div class="input-field col  m6 s12">
 							  <i class="material-icons prefix">account_circle</i>
 							  <input id="icon_prefix" type="text" class="validate" name="nomPrenom" />
 							  <label for="icon_prefix">Nom Prénom</label>
 							</div>
 							
-							
+							<!-- TEL -->
 							<div class="input-field col m6 s12">
 							  <i class="material-icons prefix">phone</i>
 							  <input id="icon_telephone" type="tel" class="validate" name="tel" />
@@ -497,6 +495,8 @@
 							</div>
 
 						    <br/>
+							
+							<!-- HERE ? -->
 							<p class="col s12 m6">
 								  <input class="with-gap" name="here" type="radio" id="test1" ng-model="mc.here" value="true"/>
 								  <label for="test1">Nous serons présent</label>
@@ -506,6 +506,7 @@
 								  <label for="test2">Nous ne pourrons pas être présent</label>
 							</p>
 							
+							<!-- NB ADULT -->
 							<div ng-show="mc.here == 'true'">
 							<div class="input-field col  m6 s12">
 							  <i class="material-icons prefix">group</i>
@@ -513,12 +514,14 @@
 							  <label for="icon_adult">Nombre d'adultes</label>
 							</div>
 							
+							<!-- NB KIDS -->
 							<div class="input-field col  m6 s12">
 							  <i class="material-icons prefix">child_friendly</i>
 							  <input id="icon_kid" type="number" class="validate" name="nb momes" />
 							  <label for="icon_kid">Nombre d'enfants (0-17ans)</label>
 							</div>
 							
+							<!-- ACOMODATION -->
 							<div class="input-field col s12">
 							 <i class="material-icons prefix"><i class="material-icons">local_hotel</i></i>
 							<input type="checkbox" id="sleep" class="right" name="Hébergement sur place" />
@@ -529,7 +532,8 @@
 							</div>
 						</div><!-- end row -->
 						<br/>
-						
+					
+					  <!-- INFOS COMPL -->
 					  <div class="row">
 						<div class="input-field col s12">
 						  <textarea id="textarea1" name="Infos complémentaires" class="materialize-textarea"></textarea>
@@ -539,8 +543,10 @@
 					  
 						<!-- <hr style="height:1px; border:none; background-color:teal; width:30%;" /> -->
 						<br/>
+						
+					  <!-- SERIE ? -->
 					  <div class=" fr">
-						Votre série préférée : 
+							Votre série préférée : 
 							<div class="row">
 									
 								<p class="col s6 m3">
@@ -573,7 +579,7 @@
 		</form>
   
   
-       <!-- ****************************  Pour venir  **************************** -->
+       <!-- ****************************  POUR VENIR  **************************** -->
 		<div class="mobile-full all-half valign-wrapper">
 			<div class="valign" style="width:100%">
 			<div class="container center">
@@ -648,7 +654,8 @@
   
    <!-- ****************************  FOOTER  **************************** -->
 			<footer class="page-footer teal">
-				<div class="container"><br/><br/>
+				<div class="container">
+					<br/><br/>
 					<div class="row">
 						<div class="col l6 s12">
 							<h5 class="white-text">
@@ -663,7 +670,7 @@
 									Céline et Thomas ou nos familles par téléphone, de préférence en
 									soirée.
 							</p>
-						</div>
+						</div><!-- end col -->
 
 						<div class="col l6 s12">
 							<h5 class="white-text">
@@ -678,9 +685,9 @@
 								<li> - Un parapluie (même si on croise les doigts)</li>
 								<li> - Nous prévenir si vous serez présent</li>
 							</ul>
-						</div>
-					</div>
-				</div>
+						</div><!-- end col -->
+					</div><!-- end row -->
+				</div><!-- end container -->
 				
 				<div class="row center" style="margin-top:5em; margin-bottom:4em;">
 					<img src="img/fagnon.png" alt="Unsplashed background img 3" style="width:300px">
@@ -688,6 +695,7 @@
 				
 				<br/><br/>
 				<div ng-view></div>
+				
 				<div class="footer-copyright">
 					<div class="container center">
 						<span style="float:left;">&#x1F490; &#x1F48D; &#x1F492; </span>
@@ -695,8 +703,9 @@
 						<span style="    font-size: 2.1em;vertical-align: sub;color: #85e2ff;">&#x26ad;</span>
 						Thomas
 						<span style="float:right;">&#x1F492; &#x1F48D; &#x1F490; </span>
-					</div>
-				</div>
+					</div><!-- end container -->
+				</div><!-- end footer-copyright -->
+				
 			</footer>
 		</div><!-- end hover container -->
   <!--  Scripts-->
@@ -709,8 +718,7 @@
 		<script src="js/init.js"></script>
 		<script src="js/map.js"></script>
 		
-		<script async defer
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIrGSbfNWbr8U9jP_lrSXD6DUfnsEE6eM&callback=initMap"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIrGSbfNWbr8U9jP_lrSXD6DUfnsEE6eM&callback=initMap"></script>
 
 	</body>
 </html>

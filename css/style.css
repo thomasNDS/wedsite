@@ -90,6 +90,9 @@ min-height: 200px;
   #index-banner {
     min-height: 500px;
   }
+  #head {
+	font-size: 3em !important;
+  }
 }
 
 @media only screen and (min-width : 700px) {
