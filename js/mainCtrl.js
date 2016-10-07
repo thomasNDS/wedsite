@@ -46,7 +46,7 @@ function MainCtrl($interval, $routeParams, $scope) {
     }
 	
 	/** */
-	this.addCSSRule =function(sheet, selector, rules, index) {
+	this.addCSSRule = function(sheet, selector, rules, index) {
 	
 		if("insertRule" in sheet) {
 			sheet.insertRule(selector + "{" + rules + "}", index);
@@ -58,7 +58,7 @@ function MainCtrl($interval, $routeParams, $scope) {
 
 	/** */
     this.switchLangToKl = function(){
-		console.log("switchLangToKl")
+		console.debug("switchLangToKl")
 		self.switchLang('fr')
 		this.addCSSRule(self.sheet, ".fr,.cv", 'font-family: "klingon", sans-serif;', 0);
 		self.currentLang = 'KLING'
@@ -66,7 +66,7 @@ function MainCtrl($interval, $routeParams, $scope) {
 	
 	/** */
     this.switchLangToEl = function(){
-		console.log("switchLangToEl")
+		console.debug("switchLangToEl")
 		self.switchLang('fr')
 		this.addCSSRule(self.sheet, ".fr,.cv", 'font-family: "elfique", sans-serif;', 0);
 		self.currentLang = 'ELFIQUE'
@@ -74,8 +74,8 @@ function MainCtrl($interval, $routeParams, $scope) {
 	
 	/** */
     this.switchLang = function(lang){
-		console.log(lang)
-		console.log(self.langs.indexOf(lang))
+		console.debug(lang)
+		console.debug(self.langs.indexOf(lang))
 		
 		if (lang) {
 			if (lang == 'el') { // Elfique ?
@@ -146,7 +146,7 @@ function MainCtrl($interval, $routeParams, $scope) {
 	$scope.$on('$routeChangeSuccess', function() {
 		var key = $routeParams.key
 		var lang = $routeParams.lang
-		console.log("ON"); 
+
 		if (key) {
 			console.debug("key exist : " + key)
 			
@@ -158,8 +158,7 @@ function MainCtrl($interval, $routeParams, $scope) {
 			 self.lvl = 2
 			}
 		}
-		console.log($routeParams.key);
-		console.log($routeParams);
+		console.debug($routeParams);
 		
 		if (lang) {
 			console.debug("Lang detected : " + lang)
@@ -176,7 +175,7 @@ MainCtrl.$inject = ['$interval',  '$routeParams', '$scope']
 var app = angular
     .module('MyPage', ['ngRoute'])
     .controller('MainCtrl', MainCtrl);
-	
+
 app.config(function($routeProvider, $locationProvider) {
 		
 	$routeProvider
@@ -188,7 +187,9 @@ app.config(function($routeProvider, $locationProvider) {
 	
 ////////////////////////////////// PROTO HELPER ///////////////////////////////
 
-/** */
+/** nb day in selected month. 
+  * @return int [27-31]
+  */
 Date.prototype.monthDays= function(){
     var d= new Date(this.getFullYear(), this.getMonth()+1, 0);
     return d.getDate();
