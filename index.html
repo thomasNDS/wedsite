@@ -4,7 +4,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="viewport"
 			content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-		<title> ♥×♥=♥²  </title>
+		<title> ♥×♥=♥² </title>
 
 		<!-- CSS  -->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -12,7 +12,7 @@
 		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
 		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 		<style>
-			.en,.pt,.cr,.br {display:none;}
+			.en,.pt,.cr,.br {display:none;} .fr {display:inline-block}
 		</style>
 	</head>
 	<body ng-controller="MainCtrl as mc">
@@ -64,25 +64,25 @@
 					<!-- Dropdown Structure -->
 					<ul id='dropdown1' class='dropdown-content'>
 						<li>
-							<a ng-click="mc.switchLang('fr')" href="#!">Français</a>
+							<a ng-click="mc.switchLang('fr')">Français</a>
 						</li>
 						<li>
-							<a ng-click="mc.switchLang('pt')" href="#!">Portugais</a>
+							<a ng-click="mc.switchLang('pt')">Portugais</a>
 						</li>
 						<li>
-							<a ng-click="mc.switchLang('cr')" href="#!">Corse</a>
+							<a ng-click="mc.switchLang('cr')">Corse</a>
 						</li>
 						<li>
-							<a ng-click="mc.switchLang('br')" href="#!">Breton</a>
+							<a ng-click="mc.switchLang('br')" >Breton</a>
 						</li>
 						<li>
-							<a ng-click="mc.switchLang('en')" href="#!">English</a>
+							<a ng-click="mc.switchLang('en')">English</a>
 						</li>
 						<li>
-							<a class="kl-fix" ng-click="mc.switchLangToKl()" href="#!">Klingon</a>
+							<a class="kl-fix" ng-click="mc.switchLangToKl()" >Klingon</a>
 						</li>
 						<li>
-							<a class="el-fix" ng-click="mc.switchLangToEl()" href="#!">Elfique</a>
+							<a class="el-fix" ng-click="mc.switchLangToEl()" >Elfique</a>
 						</li>
 					</ul>
 					
@@ -200,23 +200,20 @@
 								<div class="row center valign">
 									<h5 class="header col s12 light large-text" style="line-height: 1.5em;">
 
-										<span class="fr"> Céline et Thomas sont heureux de vous inviter au vin d'honneur </span>
+										<span class="fr br"> Céline et Thomas sont heureux de vous inviter au vin d'honneur </span>
 										<span class="en"> Celine and Thomas are happy to invite you to their wine reception </span>
 										<span class="pt"> Celine e Thomas estão felizes em convidá-lo para cerimônia de casamento </span>
 										<span class="cr"> Celine è Thomas sò cuntenti ca ju v'invitu a accuglienza di vinu </span>
-										<span class="br"> munutennoù </span>
 										
 										<span ng-show="mc.lvl==2">
-											<span class="fr"> et au repas </span>
+											<span class="fr br"> et au repas </span>
 											<span class="en"> and to the wedding meal</span>
 											<span class="cr"> e terre</span>
-											<span class="br"> munutennoù </span>
 										</span>
 
-										<span class="fr">de leur mariage, le samedi 21 janvier 2017.</span>
+										<span class="fr br">de leur mariage, le samedi 21 janvier 2017.</span>
 										<span class="en"> Saturday, January 21, 2017.</span>
 										<span class="cr"> sabbatu, 21 di jinnaru, 2017. </span>
-										<span class="br"> 21/01/2017 </span>
 									</h5>
 								</div><!-- end row -->
 
@@ -236,8 +233,9 @@
 							<h3>
 									<span class="fr">Programme</span>
 									<span class="en"> Planning</span>
-									<span class="cr">urbanisimu</span>
+									<span class="cr">Urbanisimu</span>
 									<span class="br"> Program</span>
+									<span class="pt"> Programa</span>
 							</h3>
 						</div><!-- end col -->
 						
@@ -251,12 +249,18 @@
 									<span class="en">City hall</span>
 									<span class="cr">Municipio</span>
 									<span class="br">Maerdi</span>
+									<span class="pt"> Programa</span>
 								</h5>
 								<h6 class="center">
 									<span>15h00</span>
 								</h6>
 
-								<p class="light center cv">Mariage en mairie</p>
+								<p class="light center">
+									<span class="fr br">Mariage en mairie</span>
+									<span class="en">Wedding at the town hall</span>
+									<span class="cr">Saluni nozze</span>
+									<span class="pt">Casamento na prefeitura</span>
+								</p>
 							</div>
 						</div><!-- end col -->
 						
@@ -275,7 +279,12 @@
 								<h6 class="center">
 									<span>16H15</span>
 								</h6>
-								<p class="light center cv">Cérémonie laique au château</p>
+								<p class="light center">
+									<span class="fr br">Cérémonie laique au château</span>
+									<span class="en">Laic ceremony at the castle</span>
+									<span class="cr">Cirimonia seculari à u casteddu</span>
+									<span class="pt">Casamento na prefeitura</span>
+								</p>
 							</div>
 						</div><!-- end col -->
 						
@@ -294,7 +303,12 @@
 								<h6 class="center">
 									<span>17H00</span>
 								</h6>
-								<p class="light center cv">Cocktail au château</p>
+								<p class="light center">
+									<span class="fr br">Cocktail au château</span>
+									<span class="en">Cocktail at the castle</span>
+									<span class="cr">Cocktail à u casteddu</span>
+									<span class="pt">Cocktail no castelo</span>
+								</p>
 							</div>
 						</div><!-- end col -->
 
@@ -313,7 +327,12 @@
 								<h6 class="center">
 									<span>20H00</span>
 								</h6>
-								<p class="light center cv">Repas et soirée dansante</p>
+								<p class="light center">
+									<span class="fr br">Dîner et soirée dansante</span>
+									<span class="en">Dining and dancing</span>
+									<span class="cr">Russu e abballannu</span>
+									<span class="pt">Jantar e dançar</span>
+								</p>
 							</div>
 						</div><!-- end col -->
 
@@ -332,13 +351,17 @@
 									<span class="cr">Luoghi</span>
 									<span class="br">Ardamez</span>
 							</h3>
-							<h5 class="header col s12 light cv">La cérémonie à la mairie se situera à La Rochette, et la soirée
-								au château d'Escart. Il faut compter 5 à 10 minutes de trajet entre les deux sites.</h5>
+							<h5 class="header col s12 light">
+								<span class="fr br">La cérémonie à la mairie se situera à La Rochette, et la soirée au château d'Escart. Il faut compter 5 à 10 minutes de trajet entre les deux sites.</span>
+								<span class="en">The ceremony will take place in La Rochette, and the soiree at the Escart Castle. It takes 5 to 10 minutes to travel between the two sites.</span>
+								<span class="cr">Na cirimonia in lu salone, cità si trova in La Rochette, è partitu à u casteddu di Escart. Si pigghia 5 à 10 minuti à u viaghju trà i dui siti.</span>
+								<span class="pt">Uma cerimônia na Câmara Municipal está localizado em La Rochette, e festa no castelo de Escart. Ele leva de 5 a 10 minutos para viajar entre os dois sites.</span>
+							</h5>
 						</div>
 					</div>
 				</div>
 				<div class="parallax">
-					<img src="img/img6.jpg" alt="Unsplashed background img 3">
+					<img src="img/img6.jpg" alt="background ceremonie">
 				</div>
 			</div>
   
@@ -674,7 +697,7 @@
 								<span class="br">Mont war-dro</span>
 							</h5>
 							<p class="grey-text text-lighten-4 cv">
-								Par mail au truc@super-adresse.love.
+								Par le formulaire de contact RSVP
 								<br>
 									Céline et Thomas ou nos familles par téléphone, de préférence en
 									soirée.

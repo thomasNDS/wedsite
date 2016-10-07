@@ -75,13 +75,27 @@ function MainCtrl($interval, $routeParams, $scope) {
 	/** */
     this.switchLang = function(lang){
 		console.log(lang)
-		self.currentLang = lang
+		console.log(self.langs.indexOf(lang))
 		
-		if (self.sheet.rules && self.sheet.rules.length > 0) {
-			self.sheet.deleteRule(0)
+		if (lang) {
+			if (lang == 'el') { // Elfique ?
+				 self.switchLangToEl()
+				 
+			} else if (lang == 'kl') { // Klingon ?
+				self.switchLangToKl()
+				
+			} else if (self.langs.indexOf(lang) > -1){ // other one included ?
+			
+				self.currentLang = lang
+				
+				if (self.sheet.rules && self.sheet.rules.length > 0) {
+					self.sheet.deleteRule(0)
+				}
+				this.hideAllLang()
+				this.showLang(lang)
+				
+			} // else --> default lang
 		}
-		this.hideAllLang()
-		this.showLang(lang)
     }
 	
 	/** */
@@ -95,11 +109,12 @@ function MainCtrl($interval, $routeParams, $scope) {
 	/** */
 	this.showLang = function(lang) {
 	   var els = document.getElementsByClassName(lang);
-	   [].forEach.call(els, function(el) {el.style.display = 'block' });
+	   [].forEach.call(els, function(el) {el.style.display = 'inline-block' });
 	}
 		
 	// Attributes ********************************************************************
 	
+	// DOM document
 	this.sheet = (function() {
 			var style = document.createElement("style");
 			style.appendChild(document.createTextNode(""));
@@ -107,19 +122,22 @@ function MainCtrl($interval, $routeParams, $scope) {
 			return style.sheet;
 		})();
 		
-	this.currentLang = "FR"
-	this.wedDate = new Date(2017, 1-1, 21, 14, 30, 0, 42)
-	this.langs = ["fr", "pt", "cr", "br", "en", "esp"]
 	var self = this
 	
-	self.monthCd = 0
-	self.dayCd = 0
+	self.currentLang = "fr"
+	self.wedDate = new Date(2017, 1-1, 21, 14, 30, 0, 42)
+	self.langs = ["fr", "pt", "cr", "br", "en", "esp"]
+
+	// Countdown
+	self.monthCd = 0 
+	self.dayCd = 0 
 	self.hourCd = 0
 	self.minCd = 0
 	self.secCd = 0
-	self.here = 'true'
-	self.serie = 'dora'
-	self.lvl = 1
+	
+	self.here = 'true' //rsvp form
+	self.serie = 'dora' // rsvp form
+	self.lvl = 1 // accreditation lvl
 	
 	// Init
 	this.updateCountDown()
@@ -127,7 +145,8 @@ function MainCtrl($interval, $routeParams, $scope) {
 		  
 	$scope.$on('$routeChangeSuccess', function() {
 		var key = $routeParams.key
-		
+		var lang = $routeParams.lang
+		console.log("ON"); 
 		if (key) {
 			console.debug("key exist : " + key)
 			
@@ -141,8 +160,14 @@ function MainCtrl($interval, $routeParams, $scope) {
 		}
 		console.log($routeParams.key);
 		console.log($routeParams);
+		
+		if (lang) {
+			console.debug("Lang detected : " + lang)
+			self.switchLang(lang)
+		}
+		
 	});
-		  
+		 
 }
 MainCtrl.$inject = ['$interval',  '$routeParams', '$scope']
 
@@ -155,6 +180,8 @@ var app = angular
 app.config(function($routeProvider, $locationProvider) {
 		
 	$routeProvider
+		.when("/lang/:lang", { })
+		.when("/lang/:lang/:key", { })
 		.when("/:key", { })
 
 });
